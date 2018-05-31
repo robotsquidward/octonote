@@ -15,6 +15,7 @@
 		D49D1DB620C0931500135919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DB420C0931500135919 /* LaunchScreen.storyboard */; };
 		D49D1DC120C0931500135919 /* octonotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DC020C0931500135919 /* octonotesTests.swift */; };
 		D49D1DCC20C0931500135919 /* octonotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DCB20C0931500135919 /* octonotesUITests.swift */; };
+		D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DDA20C095DA00135919 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D49D1DC720C0931500135919 /* octonotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = octonotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49D1DCB20C0931500135919 /* octonotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = octonotesUITests.swift; sourceTree = "<group>"; };
 		D49D1DCD20C0931500135919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49D1DDA20C095DA00135919 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		D49D1DA720C0931300135919 /* octonotes */ = {
 			isa = PBXGroup;
 			children = (
+				D49D1DD920C095CB00135919 /* Extensions */,
 				D49D1DA820C0931300135919 /* AppDelegate.swift */,
 				D49D1DAA20C0931300135919 /* ViewController.swift */,
 				D49D1DAC20C0931300135919 /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				D49D1DCD20C0931500135919 /* Info.plist */,
 			);
 			path = octonotesUITests;
+			sourceTree = "<group>";
+		};
+		D49D1DD920C095CB00135919 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D49D1DDA20C095DA00135919 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				D49D1DAB20C0931300135919 /* ViewController.swift in Sources */,
 				D49D1DB120C0931300135919 /* octonotes.xcdatamodeld in Sources */,
+				D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */,
 				D49D1DA920C0931300135919 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
