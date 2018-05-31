@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D49D1DA920C0931300135919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DA820C0931300135919 /* AppDelegate.swift */; };
+		D49D1DAB20C0931300135919 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DAA20C0931300135919 /* ViewController.swift */; };
+		D49D1DAE20C0931300135919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DAC20C0931300135919 /* Main.storyboard */; };
+		D49D1DB120C0931300135919 /* octonotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DAF20C0931300135919 /* octonotes.xcdatamodeld */; };
+		D49D1DB320C0931500135919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DB220C0931500135919 /* Assets.xcassets */; };
+		D49D1DB620C0931500135919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DB420C0931500135919 /* LaunchScreen.storyboard */; };
+		D49D1DC120C0931500135919 /* octonotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DC020C0931500135919 /* octonotesTests.swift */; };
+		D49D1DCC20C0931500135919 /* octonotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DCB20C0931500135919 /* octonotesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D49D1DBD20C0931500135919 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D49D1D9D20C0931200135919 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D49D1DA420C0931200135919;
+			remoteInfo = octonotes;
+		};
+		D49D1DC820C0931500135919 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D49D1D9D20C0931200135919 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D49D1DA420C0931200135919;
+			remoteInfo = octonotes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D49D1DA520C0931200135919 /* octonotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = octonotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49D1DA820C0931300135919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D49D1DAA20C0931300135919 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D49D1DAD20C0931300135919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D49D1DB020C0931300135919 /* octonotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = octonotes.xcdatamodel; sourceTree = "<group>"; };
+		D49D1DB220C0931500135919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D49D1DB520C0931500135919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D49D1DB720C0931500135919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49D1DBC20C0931500135919 /* octonotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = octonotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49D1DC020C0931500135919 /* octonotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = octonotesTests.swift; sourceTree = "<group>"; };
+		D49D1DC220C0931500135919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49D1DC720C0931500135919 /* octonotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = octonotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49D1DCB20C0931500135919 /* octonotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = octonotesUITests.swift; sourceTree = "<group>"; };
+		D49D1DCD20C0931500135919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D49D1DA220C0931200135919 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D1DB920C0931500135919 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D1DC420C0931500135919 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D49D1D9C20C0931200135919 = {
+			isa = PBXGroup;
+			children = (
+				D49D1DA720C0931300135919 /* octonotes */,
+				D49D1DBF20C0931500135919 /* octonotesTests */,
+				D49D1DCA20C0931500135919 /* octonotesUITests */,
+				D49D1DA620C0931200135919 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D49D1DA620C0931200135919 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D49D1DA520C0931200135919 /* octonotes.app */,
+				D49D1DBC20C0931500135919 /* octonotesTests.xctest */,
+				D49D1DC720C0931500135919 /* octonotesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D49D1DA720C0931300135919 /* octonotes */ = {
+			isa = PBXGroup;
+			children = (
+				D49D1DA820C0931300135919 /* AppDelegate.swift */,
+				D49D1DAA20C0931300135919 /* ViewController.swift */,
+				D49D1DAC20C0931300135919 /* Main.storyboard */,
+				D49D1DB220C0931500135919 /* Assets.xcassets */,
+				D49D1DB420C0931500135919 /* LaunchScreen.storyboard */,
+				D49D1DB720C0931500135919 /* Info.plist */,
+				D49D1DAF20C0931300135919 /* octonotes.xcdatamodeld */,
+			);
+			path = octonotes;
+			sourceTree = "<group>";
+		};
+		D49D1DBF20C0931500135919 /* octonotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				D49D1DC020C0931500135919 /* octonotesTests.swift */,
+				D49D1DC220C0931500135919 /* Info.plist */,
+			);
+			path = octonotesTests;
+			sourceTree = "<group>";
+		};
+		D49D1DCA20C0931500135919 /* octonotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D49D1DCB20C0931500135919 /* octonotesUITests.swift */,
+				D49D1DCD20C0931500135919 /* Info.plist */,
+			);
+			path = octonotesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D49D1DA420C0931200135919 /* octonotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D49D1DD020C0931500135919 /* Build configuration list for PBXNativeTarget "octonotes" */;
+			buildPhases = (
+				D49D1DA120C0931200135919 /* Sources */,
+				D49D1DA220C0931200135919 /* Frameworks */,
+				D49D1DA320C0931200135919 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = octonotes;
+			productName = octonotes;
+			productReference = D49D1DA520C0931200135919 /* octonotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D49D1DBB20C0931500135919 /* octonotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D49D1DD320C0931500135919 /* Build configuration list for PBXNativeTarget "octonotesTests" */;
+			buildPhases = (
+				D49D1DB820C0931500135919 /* Sources */,
+				D49D1DB920C0931500135919 /* Frameworks */,
+				D49D1DBA20C0931500135919 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D49D1DBE20C0931500135919 /* PBXTargetDependency */,
+			);
+			name = octonotesTests;
+			productName = octonotesTests;
+			productReference = D49D1DBC20C0931500135919 /* octonotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D49D1DC620C0931500135919 /* octonotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D49D1DD620C0931500135919 /* Build configuration list for PBXNativeTarget "octonotesUITests" */;
+			buildPhases = (
+				D49D1DC320C0931500135919 /* Sources */,
+				D49D1DC420C0931500135919 /* Frameworks */,
+				D49D1DC520C0931500135919 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D49D1DC920C0931500135919 /* PBXTargetDependency */,
+			);
+			name = octonotesUITests;
+			productName = octonotesUITests;
+			productReference = D49D1DC720C0931500135919 /* octonotesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D49D1D9D20C0931200135919 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Base11 Studios";
+				TargetAttributes = {
+					D49D1DA420C0931200135919 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					D49D1DBB20C0931500135919 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = D49D1DA420C0931200135919;
+					};
+					D49D1DC620C0931500135919 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = D49D1DA420C0931200135919;
+					};
+				};
+			};
+			buildConfigurationList = D49D1DA020C0931200135919 /* Build configuration list for PBXProject "octonotes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D49D1D9C20C0931200135919;
+			productRefGroup = D49D1DA620C0931200135919 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D49D1DA420C0931200135919 /* octonotes */,
+				D49D1DBB20C0931500135919 /* octonotesTests */,
+				D49D1DC620C0931500135919 /* octonotesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D49D1DA320C0931200135919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49D1DB620C0931500135919 /* LaunchScreen.storyboard in Resources */,
+				D49D1DB320C0931500135919 /* Assets.xcassets in Resources */,
+				D49D1DAE20C0931300135919 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D1DBA20C0931500135919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D1DC520C0931500135919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D49D1DA120C0931200135919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49D1DAB20C0931300135919 /* ViewController.swift in Sources */,
+				D49D1DB120C0931300135919 /* octonotes.xcdatamodeld in Sources */,
+				D49D1DA920C0931300135919 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D1DB820C0931500135919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49D1DC120C0931500135919 /* octonotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D1DC320C0931500135919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49D1DCC20C0931500135919 /* octonotesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D49D1DBE20C0931500135919 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D49D1DA420C0931200135919 /* octonotes */;
+			targetProxy = D49D1DBD20C0931500135919 /* PBXContainerItemProxy */;
+		};
+		D49D1DC920C0931500135919 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D49D1DA420C0931200135919 /* octonotes */;
+			targetProxy = D49D1DC820C0931500135919 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D49D1DAC20C0931300135919 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D49D1DAD20C0931300135919 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D49D1DB420C0931500135919 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D49D1DB520C0931500135919 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D49D1DCE20C0931500135919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D49D1DCF20C0931500135919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D49D1DD120C0931500135919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
+				INFOPLIST_FILE = octonotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D49D1DD220C0931500135919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
+				INFOPLIST_FILE = octonotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D49D1DD420C0931500135919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
+				INFOPLIST_FILE = octonotesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/octonotes.app/octonotes";
+			};
+			name = Debug;
+		};
+		D49D1DD520C0931500135919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
+				INFOPLIST_FILE = octonotesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/octonotes.app/octonotes";
+			};
+			name = Release;
+		};
+		D49D1DD720C0931500135919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
+				INFOPLIST_FILE = octonotesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = octonotes;
+			};
+			name = Debug;
+		};
+		D49D1DD820C0931500135919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
+				INFOPLIST_FILE = octonotesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = octonotes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D49D1DA020C0931200135919 /* Build configuration list for PBXProject "octonotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D1DCE20C0931500135919 /* Debug */,
+				D49D1DCF20C0931500135919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D49D1DD020C0931500135919 /* Build configuration list for PBXNativeTarget "octonotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D1DD120C0931500135919 /* Debug */,
+				D49D1DD220C0931500135919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D49D1DD320C0931500135919 /* Build configuration list for PBXNativeTarget "octonotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D1DD420C0931500135919 /* Debug */,
+				D49D1DD520C0931500135919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D49D1DD620C0931500135919 /* Build configuration list for PBXNativeTarget "octonotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D1DD720C0931500135919 /* Debug */,
+				D49D1DD820C0931500135919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D49D1DAF20C0931300135919 /* octonotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D49D1DB020C0931300135919 /* octonotes.xcdatamodel */,
+			);
+			currentVersion = D49D1DB020C0931300135919 /* octonotes.xcdatamodel */;
+			path = octonotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D49D1D9D20C0931200135919 /* Project object */;
+}
