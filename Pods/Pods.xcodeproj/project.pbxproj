@@ -1,0 +1,898 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BCB24868FA651FDBA60578880EBCBCE /* NSString+paragraphRangeAt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6145A86A661FEFBDFA52DF17225F9A4 /* NSString+paragraphRangeAt.swift */; };
+		0C0258AD801646E6AF384DBAD705C59A /* Marklight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9273DB0B25E981A645FCC7134D5A20C5 /* Marklight.swift */; };
+		3699AFF789452430F01816D34DD89915 /* Marklight-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AE3F91F98C7FD7FC2FD530DBEC3415 /* Marklight-dummy.m */; };
+		3D858C0843A21C331DACC93B89612214 /* Pods-octonotes-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3021A272A15DC39B17235E031742308E /* Pods-octonotes-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A55E940E308B8A5E25AD648B57F9627 /* Pods-octonotes-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E8BBC1082AC3AC246BAF55DC4622AA /* Pods-octonotes-dummy.m */; };
+		4AF17BE659281F088C0BD002C793951E /* MarklightTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3F6D158D9475074C8B7A5841D896A /* MarklightTextStorage.swift */; };
+		5427EB0674A4889B4702101623F724B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7717903A9587371EF00BB863EDA1D025 /* MarklightTextProcessingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7572347896ED94FA52E847F950131BE /* MarklightTextProcessingResult.swift */; };
+		8148D6BBAFCD061E240D1CC36CE30A38 /* MarklightRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983894EE4A6F1A037CC00A694646E00 /* MarklightRegex.swift */; };
+		857B9C1C2989F684D351442931B8728D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		89CEFE0288E974712295815DE10296E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		8EB931E96A5FBF7C41945504D2DB5936 /* Marklight-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 255610DE0284D293C81DB430337AB8DC /* Marklight-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94A7CF08C52CFFD9580413A381DC33B7 /* Pods-octonotesTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED65E3D4C1F49419461F48F8EB6F7A2 /* Pods-octonotesTests-dummy.m */; };
+		994144D412F94091ECE64C70E5106671 /* Pods-octonotesTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B13ABAAFC975B161C29A1D5D262D763C /* Pods-octonotesTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7DFEB85E0E09D492A78D74903E58DD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CDCF35188D4099440080B918518189E8 /* Array+appending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D08CCCA4304505BE9C25FE9B889DD6 /* Array+appending.swift */; };
+		D82A4C9A1C1FF7A41C6DB34ECC68C060 /* Pods-octonotesUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95E373768BF4FFCC6CC3534A7D6C481C /* Pods-octonotesUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD570A99897E6CA3CEABCF22BB5D9B1D /* MarklightStyleApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF011F4A63114129A541181000916064 /* MarklightStyleApplier.swift */; };
+		DFE887462E8EF98EB4DEF4DB3550F7C0 /* Pods-octonotesUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BE8CBFAE7918562E8D688EEA8F522E /* Pods-octonotesUITests-dummy.m */; };
+		E39976B2D4F739FA5CA1F2D6642F035E /* MarklightTextProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6ED6B511502C3047450EC22830FF42 /* MarklightTextProcessor.swift */; };
+		F63A81DD96C115785FF124BD95761079 /* UniversalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BD6D9AE9BDEBB87D22A84C8EABF5B /* UniversalTypes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		245DAE4C327F475ADA717489616DFEC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB747CD70491A55414E8899D6F85674C;
+			remoteInfo = Marklight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00676023E2F778EFB0D9E2ED3453E8DC /* Pods-octonotes-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-octonotes-acknowledgements.plist"; sourceTree = "<group>"; };
+		0C135873FF3A9ED265DA41A113DC9B6C /* Pods-octonotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-octonotes.debug.xcconfig"; sourceTree = "<group>"; };
+		0D8A1A396F7047616DCE7D310A819E6E /* Pods-octonotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-octonotesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		175F627AF6F6B79777C695D8F645FF4F /* Pods-octonotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-octonotesTests.release.xcconfig"; sourceTree = "<group>"; };
+		1983894EE4A6F1A037CC00A694646E00 /* MarklightRegex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarklightRegex.swift; path = Marklight/MarklightRegex.swift; sourceTree = "<group>"; };
+		19C96E661918C8B3BD4C534C9A27E055 /* Pods-octonotes.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-octonotes.modulemap"; sourceTree = "<group>"; };
+		255610DE0284D293C81DB430337AB8DC /* Marklight-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marklight-umbrella.h"; sourceTree = "<group>"; };
+		3021A272A15DC39B17235E031742308E /* Pods-octonotes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-octonotes-umbrella.h"; sourceTree = "<group>"; };
+		374A6D492A8963DD036B03E1C525C611 /* Marklight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Marklight.xcconfig; sourceTree = "<group>"; };
+		37F74BB2B1FE71BD6FD32871AD74A801 /* Pods_octonotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_octonotesUITests.framework; path = "Pods-octonotesUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9F0E80E901312A9C41ECF5868D09DE /* Pods-octonotesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-octonotesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C54AD6626760443A8026BA0AEB1D80A /* Pods-octonotes-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-octonotes-acknowledgements.markdown"; sourceTree = "<group>"; };
+		47E8BBC1082AC3AC246BAF55DC4622AA /* Pods-octonotes-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-octonotes-dummy.m"; sourceTree = "<group>"; };
+		4B82779EB6DAD96B80DD87A6574DA4F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2BD6D9AE9BDEBB87D22A84C8EABF5B /* UniversalTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UniversalTypes.swift; path = Marklight/UniversalTypes.swift; sourceTree = "<group>"; };
+		4ED65E3D4C1F49419461F48F8EB6F7A2 /* Pods-octonotesTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-octonotesTests-dummy.m"; sourceTree = "<group>"; };
+		50A3F6D158D9475074C8B7A5841D896A /* MarklightTextStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarklightTextStorage.swift; path = Marklight/MarklightTextStorage.swift; sourceTree = "<group>"; };
+		52D08CCCA4304505BE9C25FE9B889DD6 /* Array+appending.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+appending.swift"; path = "Marklight/Array+appending.swift"; sourceTree = "<group>"; };
+		571B7C6AF60E04B46A205434E2CAD7D1 /* Pods-octonotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-octonotesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E6ED6B511502C3047450EC22830FF42 /* MarklightTextProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarklightTextProcessor.swift; path = Marklight/MarklightTextProcessor.swift; sourceTree = "<group>"; };
+		60298637A459CDB20C627E0479D9EBBB /* Marklight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Marklight.framework; path = Marklight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63475B4E3AA47DF63A6B141365B542D6 /* Pods-octonotesUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-octonotesUITests-resources.sh"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		69515A930100A8E51877C9A911DC86D4 /* Pods-octonotesTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-octonotesTests-frameworks.sh"; sourceTree = "<group>"; };
+		7E01ABB8605878216278348F189FE24E /* Pods_octonotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_octonotesTests.framework; path = "Pods-octonotesTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B932743558332363B7663A248300A8 /* Pods-octonotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-octonotes.release.xcconfig"; sourceTree = "<group>"; };
+		86AE3F91F98C7FD7FC2FD530DBEC3415 /* Marklight-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Marklight-dummy.m"; sourceTree = "<group>"; };
+		90E607F345A794286F0B6E7C4881EF7C /* Marklight-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marklight-prefix.pch"; sourceTree = "<group>"; };
+		9273DB0B25E981A645FCC7134D5A20C5 /* Marklight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marklight.swift; path = Marklight/Marklight.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95E373768BF4FFCC6CC3534A7D6C481C /* Pods-octonotesUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-octonotesUITests-umbrella.h"; sourceTree = "<group>"; };
+		B0EE040A1628774FC2D0D994171C0C24 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B13ABAAFC975B161C29A1D5D262D763C /* Pods-octonotesTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-octonotesTests-umbrella.h"; sourceTree = "<group>"; };
+		B16678393C77EFCD65C943B0066AA5E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6145A86A661FEFBDFA52DF17225F9A4 /* NSString+paragraphRangeAt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSString+paragraphRangeAt.swift"; path = "Marklight/NSString+paragraphRangeAt.swift"; sourceTree = "<group>"; };
+		C1C39A2D35E3D7E8FA80E7086674E410 /* Pods-octonotesTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-octonotesTests.modulemap"; sourceTree = "<group>"; };
+		C7572347896ED94FA52E847F950131BE /* MarklightTextProcessingResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarklightTextProcessingResult.swift; path = Marklight/MarklightTextProcessingResult.swift; sourceTree = "<group>"; };
+		C9A1824EDDEAA6697500364359698D78 /* Pods-octonotesUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-octonotesUITests.modulemap"; sourceTree = "<group>"; };
+		CDEA9A8589EC5A72E305661DE8F97BC3 /* Pods-octonotesTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-octonotesTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CF011F4A63114129A541181000916064 /* MarklightStyleApplier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarklightStyleApplier.swift; path = Marklight/MarklightStyleApplier.swift; sourceTree = "<group>"; };
+		D3D74BE7CAB7FF72112D5629056010F6 /* Pods-octonotesTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-octonotesTests-resources.sh"; sourceTree = "<group>"; };
+		D6D87A85949B750BB39F5474CF6E78C6 /* Pods_octonotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_octonotes.framework; path = "Pods-octonotes.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D938B9272984FF888375F4ACF90B2EB9 /* Pods-octonotesUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-octonotesUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DC6208C8B5B5B42349C88AC61F711B94 /* Pods-octonotesTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-octonotesTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E28A14D38D6C242E2B3529BD7D92704A /* Marklight.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Marklight.modulemap; sourceTree = "<group>"; };
+		E3A77516713255D44CB3E8BEA2513A68 /* Pods-octonotesUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-octonotesUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		EE48F37367CEE9EF311500FB25382446 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F300AA84DA8DA38B65434936F746A7DD /* Pods-octonotes-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-octonotes-resources.sh"; sourceTree = "<group>"; };
+		F433C4CA49C4020D2AAE2C4F89D3FC91 /* Pods-octonotesUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-octonotesUITests-frameworks.sh"; sourceTree = "<group>"; };
+		F5BE8CBFAE7918562E8D688EEA8F522E /* Pods-octonotesUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-octonotesUITests-dummy.m"; sourceTree = "<group>"; };
+		F9BC4791C462687556021D67332D8841 /* Pods-octonotes-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-octonotes-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B58F2C8CCA4C87F3AC3894596898A3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5427EB0674A4889B4702101623F724B3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F77513CDD5B80591B3B300561DCEFDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				857B9C1C2989F684D351442931B8728D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7587847AB8FCA555A2FA28165D2E09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7DFEB85E0E09D492A78D74903E58DD1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F04F7E4F2C504763CD524E0F8E048706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CEFE0288E974712295815DE10296E7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D8C70DF2B3E5C7278507E94E3DD6F36 /* Marklight */ = {
+			isa = PBXGroup;
+			children = (
+				52D08CCCA4304505BE9C25FE9B889DD6 /* Array+appending.swift */,
+				9273DB0B25E981A645FCC7134D5A20C5 /* Marklight.swift */,
+				1983894EE4A6F1A037CC00A694646E00 /* MarklightRegex.swift */,
+				CF011F4A63114129A541181000916064 /* MarklightStyleApplier.swift */,
+				C7572347896ED94FA52E847F950131BE /* MarklightTextProcessingResult.swift */,
+				5E6ED6B511502C3047450EC22830FF42 /* MarklightTextProcessor.swift */,
+				50A3F6D158D9475074C8B7A5841D896A /* MarklightTextStorage.swift */,
+				B6145A86A661FEFBDFA52DF17225F9A4 /* NSString+paragraphRangeAt.swift */,
+				4E2BD6D9AE9BDEBB87D22A84C8EABF5B /* UniversalTypes.swift */,
+				15C15EEE2B3CB784B49C3E5B617641FD /* Support Files */,
+			);
+			name = Marklight;
+			path = Marklight;
+			sourceTree = "<group>";
+		};
+		15C15EEE2B3CB784B49C3E5B617641FD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B16678393C77EFCD65C943B0066AA5E0 /* Info.plist */,
+				E28A14D38D6C242E2B3529BD7D92704A /* Marklight.modulemap */,
+				374A6D492A8963DD036B03E1C525C611 /* Marklight.xcconfig */,
+				86AE3F91F98C7FD7FC2FD530DBEC3415 /* Marklight-dummy.m */,
+				90E607F345A794286F0B6E7C4881EF7C /* Marklight-prefix.pch */,
+				255610DE0284D293C81DB430337AB8DC /* Marklight-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Marklight";
+			sourceTree = "<group>";
+		};
+		1C604FD8B50A53FDD991485B4E6D052A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D8C70DF2B3E5C7278507E94E3DD6F36 /* Marklight */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1C604FD8B50A53FDD991485B4E6D052A /* Pods */,
+				83627231D92F6BCC3AE8388B77359487 /* Products */,
+				D5B7539860E7A87E864B6354E24179F2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		83627231D92F6BCC3AE8388B77359487 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60298637A459CDB20C627E0479D9EBBB /* Marklight.framework */,
+				D6D87A85949B750BB39F5474CF6E78C6 /* Pods_octonotes.framework */,
+				7E01ABB8605878216278348F189FE24E /* Pods_octonotesTests.framework */,
+				37F74BB2B1FE71BD6FD32871AD74A801 /* Pods_octonotesUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FA72BAFA682BFE96CFB9485D89C888C /* Pods-octonotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B82779EB6DAD96B80DD87A6574DA4F6 /* Info.plist */,
+				C9A1824EDDEAA6697500364359698D78 /* Pods-octonotesUITests.modulemap */,
+				D938B9272984FF888375F4ACF90B2EB9 /* Pods-octonotesUITests-acknowledgements.markdown */,
+				E3A77516713255D44CB3E8BEA2513A68 /* Pods-octonotesUITests-acknowledgements.plist */,
+				F5BE8CBFAE7918562E8D688EEA8F522E /* Pods-octonotesUITests-dummy.m */,
+				F433C4CA49C4020D2AAE2C4F89D3FC91 /* Pods-octonotesUITests-frameworks.sh */,
+				63475B4E3AA47DF63A6B141365B542D6 /* Pods-octonotesUITests-resources.sh */,
+				95E373768BF4FFCC6CC3534A7D6C481C /* Pods-octonotesUITests-umbrella.h */,
+				3A9F0E80E901312A9C41ECF5868D09DE /* Pods-octonotesUITests.debug.xcconfig */,
+				0D8A1A396F7047616DCE7D310A819E6E /* Pods-octonotesUITests.release.xcconfig */,
+			);
+			name = "Pods-octonotesUITests";
+			path = "Target Support Files/Pods-octonotesUITests";
+			sourceTree = "<group>";
+		};
+		9B0A8A35A3F43EF131163445998EE3BE /* Pods-octonotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0EE040A1628774FC2D0D994171C0C24 /* Info.plist */,
+				C1C39A2D35E3D7E8FA80E7086674E410 /* Pods-octonotesTests.modulemap */,
+				DC6208C8B5B5B42349C88AC61F711B94 /* Pods-octonotesTests-acknowledgements.markdown */,
+				CDEA9A8589EC5A72E305661DE8F97BC3 /* Pods-octonotesTests-acknowledgements.plist */,
+				4ED65E3D4C1F49419461F48F8EB6F7A2 /* Pods-octonotesTests-dummy.m */,
+				69515A930100A8E51877C9A911DC86D4 /* Pods-octonotesTests-frameworks.sh */,
+				D3D74BE7CAB7FF72112D5629056010F6 /* Pods-octonotesTests-resources.sh */,
+				B13ABAAFC975B161C29A1D5D262D763C /* Pods-octonotesTests-umbrella.h */,
+				571B7C6AF60E04B46A205434E2CAD7D1 /* Pods-octonotesTests.debug.xcconfig */,
+				175F627AF6F6B79777C695D8F645FF4F /* Pods-octonotesTests.release.xcconfig */,
+			);
+			name = "Pods-octonotesTests";
+			path = "Target Support Files/Pods-octonotesTests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D5B7539860E7A87E864B6354E24179F2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D70A13F3BFB3A51B6C31450F2E280051 /* Pods-octonotes */,
+				9B0A8A35A3F43EF131163445998EE3BE /* Pods-octonotesTests */,
+				8FA72BAFA682BFE96CFB9485D89C888C /* Pods-octonotesUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D70A13F3BFB3A51B6C31450F2E280051 /* Pods-octonotes */ = {
+			isa = PBXGroup;
+			children = (
+				EE48F37367CEE9EF311500FB25382446 /* Info.plist */,
+				19C96E661918C8B3BD4C534C9A27E055 /* Pods-octonotes.modulemap */,
+				3C54AD6626760443A8026BA0AEB1D80A /* Pods-octonotes-acknowledgements.markdown */,
+				00676023E2F778EFB0D9E2ED3453E8DC /* Pods-octonotes-acknowledgements.plist */,
+				47E8BBC1082AC3AC246BAF55DC4622AA /* Pods-octonotes-dummy.m */,
+				F9BC4791C462687556021D67332D8841 /* Pods-octonotes-frameworks.sh */,
+				F300AA84DA8DA38B65434936F746A7DD /* Pods-octonotes-resources.sh */,
+				3021A272A15DC39B17235E031742308E /* Pods-octonotes-umbrella.h */,
+				0C135873FF3A9ED265DA41A113DC9B6C /* Pods-octonotes.debug.xcconfig */,
+				80B932743558332363B7663A248300A8 /* Pods-octonotes.release.xcconfig */,
+			);
+			name = "Pods-octonotes";
+			path = "Target Support Files/Pods-octonotes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7507B96FF0B03F9298EBEF016A596E55 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D858C0843A21C331DACC93B89612214 /* Pods-octonotes-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA9D3072E29798ABDD63780A1549680C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				994144D412F94091ECE64C70E5106671 /* Pods-octonotesTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D63F37BEE5B9BDAE4CC7321C3AAA5313 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82A4C9A1C1FF7A41C6DB34ECC68C060 /* Pods-octonotesUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F118A5C32844ADE05F72D98299A3CE79 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB931E96A5FBF7C41945504D2DB5936 /* Marklight-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4E22601D96BF9F08BBD59171164D8693 /* Pods-octonotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60162CF3C9CA670836E29D3592C594FD /* Build configuration list for PBXNativeTarget "Pods-octonotesUITests" */;
+			buildPhases = (
+				40486B5B3B6137DE3401343ADAAC7667 /* Sources */,
+				F04F7E4F2C504763CD524E0F8E048706 /* Frameworks */,
+				D63F37BEE5B9BDAE4CC7321C3AAA5313 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-octonotesUITests";
+			productName = "Pods-octonotesUITests";
+			productReference = 37F74BB2B1FE71BD6FD32871AD74A801 /* Pods_octonotesUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		513206680424678AADC4BF4CB2149D5E /* Pods-octonotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C202A069482B6DB27E6B8617277AC240 /* Build configuration list for PBXNativeTarget "Pods-octonotesTests" */;
+			buildPhases = (
+				4A360DC91D0AB168F2D6E1EC1FC12878 /* Sources */,
+				7F77513CDD5B80591B3B300561DCEFDD /* Frameworks */,
+				BA9D3072E29798ABDD63780A1549680C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-octonotesTests";
+			productName = "Pods-octonotesTests";
+			productReference = 7E01ABB8605878216278348F189FE24E /* Pods_octonotesTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		870D415915F4EE1F07ED5D04D99D00C6 /* Pods-octonotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CEE0C6FDF26B61E1E3A1707530A99E6 /* Build configuration list for PBXNativeTarget "Pods-octonotes" */;
+			buildPhases = (
+				CA8A0D31BE9AB2B22E60F66F96ED13B4 /* Sources */,
+				0B58F2C8CCA4C87F3AC3894596898A3F /* Frameworks */,
+				7507B96FF0B03F9298EBEF016A596E55 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				338F04AB716AD0E41385837E361A684B /* PBXTargetDependency */,
+			);
+			name = "Pods-octonotes";
+			productName = "Pods-octonotes";
+			productReference = D6D87A85949B750BB39F5474CF6E78C6 /* Pods_octonotes.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FB747CD70491A55414E8899D6F85674C /* Marklight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7FA6A3A435923A00422806238A2573C /* Build configuration list for PBXNativeTarget "Marklight" */;
+			buildPhases = (
+				93749A8D9AEFD256D471E0212CF02991 /* Sources */,
+				CA7587847AB8FCA555A2FA28165D2E09 /* Frameworks */,
+				F118A5C32844ADE05F72D98299A3CE79 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Marklight;
+			productName = Marklight;
+			productReference = 60298637A459CDB20C627E0479D9EBBB /* Marklight.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 83627231D92F6BCC3AE8388B77359487 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB747CD70491A55414E8899D6F85674C /* Marklight */,
+				870D415915F4EE1F07ED5D04D99D00C6 /* Pods-octonotes */,
+				513206680424678AADC4BF4CB2149D5E /* Pods-octonotesTests */,
+				4E22601D96BF9F08BBD59171164D8693 /* Pods-octonotesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40486B5B3B6137DE3401343ADAAC7667 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE887462E8EF98EB4DEF4DB3550F7C0 /* Pods-octonotesUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A360DC91D0AB168F2D6E1EC1FC12878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94A7CF08C52CFFD9580413A381DC33B7 /* Pods-octonotesTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93749A8D9AEFD256D471E0212CF02991 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDCF35188D4099440080B918518189E8 /* Array+appending.swift in Sources */,
+				3699AFF789452430F01816D34DD89915 /* Marklight-dummy.m in Sources */,
+				0C0258AD801646E6AF384DBAD705C59A /* Marklight.swift in Sources */,
+				8148D6BBAFCD061E240D1CC36CE30A38 /* MarklightRegex.swift in Sources */,
+				DD570A99897E6CA3CEABCF22BB5D9B1D /* MarklightStyleApplier.swift in Sources */,
+				7717903A9587371EF00BB863EDA1D025 /* MarklightTextProcessingResult.swift in Sources */,
+				E39976B2D4F739FA5CA1F2D6642F035E /* MarklightTextProcessor.swift in Sources */,
+				4AF17BE659281F088C0BD002C793951E /* MarklightTextStorage.swift in Sources */,
+				0BCB24868FA651FDBA60578880EBCBCE /* NSString+paragraphRangeAt.swift in Sources */,
+				F63A81DD96C115785FF124BD95761079 /* UniversalTypes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA8A0D31BE9AB2B22E60F66F96ED13B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A55E940E308B8A5E25AD648B57F9627 /* Pods-octonotes-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		338F04AB716AD0E41385837E361A684B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Marklight;
+			target = FB747CD70491A55414E8899D6F85674C /* Marklight */;
+			targetProxy = 245DAE4C327F475ADA717489616DFEC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0175F7E4A2D4CC4C26576682A2D5FF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374A6D492A8963DD036B03E1C525C611 /* Marklight.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Marklight/Marklight-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marklight/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Marklight/Marklight.modulemap";
+				PRODUCT_NAME = Marklight;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1E81BE7869F59C9988B5F9BC711A0DF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571B7C6AF60E04B46A205434E2CAD7D1 /* Pods-octonotesTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-octonotesTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-octonotesTests/Pods-octonotesTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_octonotesTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		26F954BA177A9A46FFFD4E23ED11D67A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		3DE4A4F15428C157BCB61BF2D6BE02FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374A6D492A8963DD036B03E1C525C611 /* Marklight.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Marklight/Marklight-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marklight/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Marklight/Marklight.modulemap";
+				PRODUCT_NAME = Marklight;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		402B63CE83EA17940461394F880DCACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 175F627AF6F6B79777C695D8F645FF4F /* Pods-octonotesTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-octonotesTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-octonotesTests/Pods-octonotesTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_octonotesTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44064D8D0C62077D368AABBD35A1311B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C135873FF3A9ED265DA41A113DC9B6C /* Pods-octonotes.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-octonotes/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-octonotes/Pods-octonotes.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_octonotes;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92970750298711D3E0781665A64888B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D8A1A396F7047616DCE7D310A819E6E /* Pods-octonotesUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-octonotesUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-octonotesUITests/Pods-octonotesUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_octonotesUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B79206EC75249BB53915AAF48D79086D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80B932743558332363B7663A248300A8 /* Pods-octonotes.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-octonotes/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-octonotes/Pods-octonotes.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_octonotes;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E48DDE17FADE55BAAD6BA006DE8B999B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9F0E80E901312A9C41ECF5868D09DE /* Pods-octonotesUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-octonotesUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-octonotesUITests/Pods-octonotesUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_octonotesUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */,
+				26F954BA177A9A46FFFD4E23ED11D67A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60162CF3C9CA670836E29D3592C594FD /* Build configuration list for PBXNativeTarget "Pods-octonotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E48DDE17FADE55BAAD6BA006DE8B999B /* Debug */,
+				92970750298711D3E0781665A64888B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CEE0C6FDF26B61E1E3A1707530A99E6 /* Build configuration list for PBXNativeTarget "Pods-octonotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44064D8D0C62077D368AABBD35A1311B /* Debug */,
+				B79206EC75249BB53915AAF48D79086D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C202A069482B6DB27E6B8617277AC240 /* Build configuration list for PBXNativeTarget "Pods-octonotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E81BE7869F59C9988B5F9BC711A0DF7 /* Debug */,
+				402B63CE83EA17940461394F880DCACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7FA6A3A435923A00422806238A2573C /* Build configuration list for PBXNativeTarget "Marklight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0175F7E4A2D4CC4C26576682A2D5FF77 /* Debug */,
+				3DE4A4F15428C157BCB61BF2D6BE02FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

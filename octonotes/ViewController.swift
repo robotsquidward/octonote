@@ -49,7 +49,9 @@ class ViewController: UIViewController {
         })
             
         //Kick it off
-        self.authSession?.start()
+        //self.authSession?.start()
+        
+        present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TextEntryViewController"), animated: true, completion: nil)
     }
 }
 

@@ -1,0 +1,6 @@
+framework module Pods_octonotes {
+  umbrella header "Pods-octonotes-umbrella.h"
+
+  export *
+  module * { export * }
+}

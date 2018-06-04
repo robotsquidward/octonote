@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BC286BD6FF32A69B394D229 /* Pods_octonotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CAE15754AC59832EFD64A0 /* Pods_octonotesTests.framework */; };
+		2C9547F4CA88FA5F2200F3B2 /* Pods_octonotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4221C46C6CCFFDF69197A59D /* Pods_octonotesUITests.framework */; };
 		D49D1DA920C0931300135919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DA820C0931300135919 /* AppDelegate.swift */; };
 		D49D1DAB20C0931300135919 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DAA20C0931300135919 /* ViewController.swift */; };
 		D49D1DAE20C0931300135919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DAC20C0931300135919 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 		D49D1DC120C0931500135919 /* octonotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DC020C0931500135919 /* octonotesTests.swift */; };
 		D49D1DCC20C0931500135919 /* octonotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DCB20C0931500135919 /* octonotesUITests.swift */; };
 		D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DDA20C095DA00135919 /* UIViewExtension.swift */; };
+		D49D1DDD20C5DE1E00135919 /* TextEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */; };
+		F41A216F61775DD1319D6C0F /* Pods_octonotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2687EC3B49E0950618C4245 /* Pods_octonotes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4221C46C6CCFFDF69197A59D /* Pods_octonotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_octonotesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		747F57C9455F2020570314B8 /* Pods-octonotesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesUITests/Pods-octonotesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2687EC3B49E0950618C4245 /* Pods_octonotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_octonotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4CAE15754AC59832EFD64A0 /* Pods_octonotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_octonotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7AD49D9799D018F1723FF1D /* Pods-octonotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-octonotes/Pods-octonotes.debug.xcconfig"; sourceTree = "<group>"; };
+		BF8A7B9C1D086887E1B4EA7B /* Pods-octonotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesUITests/Pods-octonotesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D49D1DA520C0931200135919 /* octonotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = octonotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49D1DA820C0931300135919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49D1DAA20C0931300135919 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +61,10 @@
 		D49D1DCB20C0931500135919 /* octonotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = octonotesUITests.swift; sourceTree = "<group>"; };
 		D49D1DCD20C0931500135919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49D1DDA20C095DA00135919 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryViewController.swift; sourceTree = "<group>"; };
+		E4077216CF9AA8B59568F0C1 /* Pods-octonotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.release.xcconfig"; sourceTree = "<group>"; };
+		ECCFC596963D1C9EC1E72225 /* Pods-octonotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotes/Pods-octonotes.release.xcconfig"; sourceTree = "<group>"; };
+		EDCC60FB4CFA35B30544BE32 /* Pods-octonotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41A216F61775DD1319D6C0F /* Pods_octonotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC286BD6FF32A69B394D229 /* Pods_octonotesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9547F4CA88FA5F2200F3B2 /* Pods_octonotesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05361B89D95137E91D8023EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2687EC3B49E0950618C4245 /* Pods_octonotes.framework */,
+				A4CAE15754AC59832EFD64A0 /* Pods_octonotesTests.framework */,
+				4221C46C6CCFFDF69197A59D /* Pods_octonotesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57BD6A64AC6CDD5C5A6DFC7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7AD49D9799D018F1723FF1D /* Pods-octonotes.debug.xcconfig */,
+				ECCFC596963D1C9EC1E72225 /* Pods-octonotes.release.xcconfig */,
+				EDCC60FB4CFA35B30544BE32 /* Pods-octonotesTests.debug.xcconfig */,
+				E4077216CF9AA8B59568F0C1 /* Pods-octonotesTests.release.xcconfig */,
+				747F57C9455F2020570314B8 /* Pods-octonotesUITests.debug.xcconfig */,
+				BF8A7B9C1D086887E1B4EA7B /* Pods-octonotesUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D49D1D9C20C0931200135919 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +125,8 @@
 				D49D1DBF20C0931500135919 /* octonotesTests */,
 				D49D1DCA20C0931500135919 /* octonotesUITests */,
 				D49D1DA620C0931200135919 /* Products */,
+				57BD6A64AC6CDD5C5A6DFC7A /* Pods */,
+				05361B89D95137E91D8023EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +146,7 @@
 				D49D1DD920C095CB00135919 /* Extensions */,
 				D49D1DA820C0931300135919 /* AppDelegate.swift */,
 				D49D1DAA20C0931300135919 /* ViewController.swift */,
+				D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */,
 				D49D1DAC20C0931300135919 /* Main.storyboard */,
 				D49D1DB220C0931500135919 /* Assets.xcassets */,
 				D49D1DB420C0931500135919 /* LaunchScreen.storyboard */,
@@ -146,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D49D1DD020C0931500135919 /* Build configuration list for PBXNativeTarget "octonotes" */;
 			buildPhases = (
+				7DD2E967A09C56A1472E1D13 /* [CP] Check Pods Manifest.lock */,
 				D49D1DA120C0931200135919 /* Sources */,
 				D49D1DA220C0931200135919 /* Frameworks */,
 				D49D1DA320C0931200135919 /* Resources */,
+				53CEFCC7D4D2F3BF136F417F /* [CP] Embed Pods Frameworks */,
+				B3A66B50A5DC19F2FA3644C1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D49D1DD320C0931500135919 /* Build configuration list for PBXNativeTarget "octonotesTests" */;
 			buildPhases = (
+				0CE6755A70C614B30C879010 /* [CP] Check Pods Manifest.lock */,
 				D49D1DB820C0931500135919 /* Sources */,
 				D49D1DB920C0931500135919 /* Frameworks */,
 				D49D1DBA20C0931500135919 /* Resources */,
+				A4D470FEED9B5E8CB87DF369 /* [CP] Embed Pods Frameworks */,
+				DDA2F608DF3B3DF8D7C0C2EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D49D1DD620C0931500135919 /* Build configuration list for PBXNativeTarget "octonotesUITests" */;
 			buildPhases = (
+				6F8A15D21FF0640B2CB4C038 /* [CP] Check Pods Manifest.lock */,
 				D49D1DC320C0931500135919 /* Sources */,
 				D49D1DC420C0931500135919 /* Frameworks */,
 				D49D1DC520C0931500135919 /* Resources */,
+				6925B6B1D4F69E979E73606A /* [CP] Embed Pods Frameworks */,
+				BD0DBED0E2B8DED29F72347E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +317,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CE6755A70C614B30C879010 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-octonotesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53CEFCC7D4D2F3BF136F417F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-octonotes/Pods-octonotes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Marklight/Marklight.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marklight.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-octonotes/Pods-octonotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6925B6B1D4F69E979E73606A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-octonotesUITests/Pods-octonotesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F8A15D21FF0640B2CB4C038 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-octonotesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DD2E967A09C56A1472E1D13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-octonotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4D470FEED9B5E8CB87DF369 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A66B50A5DC19F2FA3644C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-octonotes/Pods-octonotes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD0DBED0E2B8DED29F72347E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-octonotesUITests/Pods-octonotesUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDA2F608DF3B3DF8D7C0C2EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D49D1DA120C0931200135919 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,6 +474,7 @@
 			files = (
 				D49D1DAB20C0931300135919 /* ViewController.swift in Sources */,
 				D49D1DB120C0931300135919 /* octonotes.xcdatamodeld in Sources */,
+				D49D1DDD20C5DE1E00135919 /* TextEntryViewController.swift in Sources */,
 				D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */,
 				D49D1DA920C0931300135919 /* AppDelegate.swift in Sources */,
 			);
@@ -444,6 +647,7 @@
 		};
 		D49D1DD120C0931500135919 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7AD49D9799D018F1723FF1D /* Pods-octonotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +666,7 @@
 		};
 		D49D1DD220C0931500135919 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECCFC596963D1C9EC1E72225 /* Pods-octonotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +685,7 @@
 		};
 		D49D1DD420C0931500135919 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDCC60FB4CFA35B30544BE32 /* Pods-octonotesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +707,7 @@
 		};
 		D49D1DD520C0931500135919 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4077216CF9AA8B59568F0C1 /* Pods-octonotesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +729,7 @@
 		};
 		D49D1DD720C0931500135919 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 747F57C9455F2020570314B8 /* Pods-octonotesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -542,6 +750,7 @@
 		};
 		D49D1DD820C0931500135919 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF8A7B9C1D086887E1B4EA7B /* Pods-octonotesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
