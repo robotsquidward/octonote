@@ -19,6 +19,7 @@
 		D49D1DCC20C0931500135919 /* octonotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DCB20C0931500135919 /* octonotesUITests.swift */; };
 		D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DDA20C095DA00135919 /* UIViewExtension.swift */; };
 		D49D1DDD20C5DE1E00135919 /* TextEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */; };
+		D49D1DE020C612C400135919 /* Sample.md in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DDE20C6106C00135919 /* Sample.md */; };
 		F41A216F61775DD1319D6C0F /* Pods_octonotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2687EC3B49E0950618C4245 /* Pods_octonotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		D49D1DCD20C0931500135919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49D1DDA20C095DA00135919 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryViewController.swift; sourceTree = "<group>"; };
+		D49D1DDE20C6106C00135919 /* Sample.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sample.md; sourceTree = "<group>"; };
 		E4077216CF9AA8B59568F0C1 /* Pods-octonotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECCFC596963D1C9EC1E72225 /* Pods-octonotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotes/Pods-octonotes.release.xcconfig"; sourceTree = "<group>"; };
 		EDCC60FB4CFA35B30544BE32 /* Pods-octonotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		D49D1DA720C0931300135919 /* octonotes */ = {
 			isa = PBXGroup;
 			children = (
+				D49D1DDF20C612B600135919 /* Bundle */,
 				D49D1DD920C095CB00135919 /* Extensions */,
 				D49D1DA820C0931300135919 /* AppDelegate.swift */,
 				D49D1DAA20C0931300135919 /* ViewController.swift */,
@@ -180,6 +183,14 @@
 				D49D1DDA20C095DA00135919 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D49D1DDF20C612B600135919 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				D49D1DDE20C6106C00135919 /* Sample.md */,
+			);
+			path = Bundle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49D1DE020C612C400135919 /* Sample.md in Resources */,
 				D49D1DB620C0931500135919 /* LaunchScreen.storyboard in Resources */,
 				D49D1DB320C0931500135919 /* Assets.xcassets in Resources */,
 				D49D1DAE20C0931300135919 /* Main.storyboard in Resources */,

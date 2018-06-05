@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
         //OAuth Provider URL
         let authURL = URL(string: "https://github.com/login/oauth/authorize?client_id=b8ec13ff8282fb430098")
-        let callbackUrlScheme = "https://ajkueterman.com/octonote/auth/"
+        let callbackUrlScheme = "octonotes://auth"
         
         //Initialize auth session
         self.authSession = SFAuthenticationSession.init(url: authURL!, callbackURLScheme: callbackUrlScheme,
@@ -42,16 +42,16 @@ class ViewController: UIViewController {
                 return
             }
             
-            let oauthToken = NSURLComponents(string: (successURL.absoluteString))?.queryItems?.filter({$0.name == "oauth_token"}).first
+            let oauthToken = NSURLComponents(string: (successURL.absoluteString))?.queryItems?.filter({$0.name == "code"}).first
             
             // Do what you now that you've got the token, or use the callBack URL
             print(oauthToken ?? "No OAuth Token")
         })
             
         //Kick it off
-        //self.authSession?.start()
+        self.authSession?.start()
         
-        present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TextEntryViewController"), animated: true, completion: nil)
+        //present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TextEntryViewController"), animated: true, completion: nil)
     }
 }
 
