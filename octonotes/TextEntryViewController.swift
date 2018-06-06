@@ -27,7 +27,7 @@ class TextEntryViewController: UIViewController, UITextViewDelegate {
         textStorage.marklightTextProcessor.codeColor = UIColor.orange
         textStorage.marklightTextProcessor.quoteColor = UIColor.darkGray
         textStorage.marklightTextProcessor.syntaxColor = UIColor.blue
-        textStorage.marklightTextProcessor.codeFontName = "Courier"
+        textStorage.marklightTextProcessor.codeFontName = "Menlo"
         textStorage.marklightTextProcessor.fontTextStyle = UIFontTextStyle.subheadline.rawValue
         textStorage.marklightTextProcessor.hideSyntax = false
         
@@ -52,10 +52,10 @@ class TextEntryViewController: UIViewController, UITextViewDelegate {
         
         view.addSubview(textView)
         
-        view.addConstraint(NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0))
-        bottomTextViewConstraint = NSLayoutConstraint(item: textView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
+        view.addConstraint(NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .topMargin, multiplier: 1, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leadingMargin, multiplier: 1, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailingMargin, multiplier: 1, constant: 0))
+        bottomTextViewConstraint = NSLayoutConstraint(item: textView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottomMargin, multiplier: 1, constant: 0)
         guard let bottomTextViewConstraint = bottomTextViewConstraint else { return }
         view.addConstraint(bottomTextViewConstraint)
         
