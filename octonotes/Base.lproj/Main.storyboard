@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,8 +43,8 @@
                                     <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Qz-TL-Evy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?????" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1j-rw-BXq">
-                                <rect key="frame" x="113" y="244" width="150" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OctoNote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1j-rw-BXq">
+                                <rect key="frame" x="112.5" y="244" width="150" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="CcH-o4-pQm"/>
                                     <constraint firstAttribute="width" constant="150" id="SPp-0o-dEE"/>
@@ -73,6 +71,40 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Git Hub Profile View Controller-->
+        <scene sceneID="uEt-bG-XpS">
+            <objects>
+                <viewController restorationIdentifier="GitHubProfileViewController" storyboardIdentifier="GitHubProfileViewController" id="Xw5-Sd-UNe" customClass="GitHubProfileViewController" customModule="octonotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QVQ-HE-7Lf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Your GitHub Profile" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucS-VO-VmN">
+                                <rect key="frame" x="16" y="20" width="343" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="6nm-Mn-1Lg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ucS-VO-VmN" firstAttribute="leading" secondItem="CYh-QP-MDk" secondAttribute="leading" constant="16" id="I8Z-Ml-mug"/>
+                            <constraint firstItem="ucS-VO-VmN" firstAttribute="top" secondItem="CYh-QP-MDk" secondAttribute="top" id="awu-ag-lou"/>
+                            <constraint firstItem="CYh-QP-MDk" firstAttribute="trailing" secondItem="ucS-VO-VmN" secondAttribute="trailing" constant="16" id="lFJ-Z4-pYP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CYh-QP-MDk"/>
+                    </view>
+                    <connections>
+                        <outlet property="testArea" destination="ucS-VO-VmN" id="q8r-91-ksh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBo-Us-2gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="134"/>
+        </scene>
         <!--Text Entry View Controller-->
         <scene sceneID="h8L-Oo-22O">
             <objects>
@@ -86,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l24-jv-M6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="137" y="843"/>
         </scene>
     </scenes>
     <resources>

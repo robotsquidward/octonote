@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0BC286BD6FF32A69B394D229 /* Pods_octonotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CAE15754AC59832EFD64A0 /* Pods_octonotesTests.framework */; };
 		2C9547F4CA88FA5F2200F3B2 /* Pods_octonotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4221C46C6CCFFDF69197A59D /* Pods_octonotesUITests.framework */; };
+		D44D3DDC20C8EF6000C65081 /* GitHubProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D3DDB20C8EF6000C65081 /* GitHubProfileViewController.swift */; };
 		D49D1DA920C0931300135919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DA820C0931300135919 /* AppDelegate.swift */; };
 		D49D1DAB20C0931300135919 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DAA20C0931300135919 /* ViewController.swift */; };
 		D49D1DAE20C0931300135919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DAC20C0931300135919 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		A4CAE15754AC59832EFD64A0 /* Pods_octonotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_octonotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7AD49D9799D018F1723FF1D /* Pods-octonotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-octonotes/Pods-octonotes.debug.xcconfig"; sourceTree = "<group>"; };
 		BF8A7B9C1D086887E1B4EA7B /* Pods-octonotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesUITests/Pods-octonotesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D44D3DDB20C8EF6000C65081 /* GitHubProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubProfileViewController.swift; sourceTree = "<group>"; };
 		D49D1DA520C0931200135919 /* octonotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = octonotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49D1DA820C0931300135919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49D1DAA20C0931300135919 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				D49D1DB420C0931500135919 /* LaunchScreen.storyboard */,
 				D49D1DB720C0931500135919 /* Info.plist */,
 				D49D1DAF20C0931300135919 /* octonotes.xcdatamodeld */,
+				D44D3DDB20C8EF6000C65081 /* GitHubProfileViewController.swift */,
 			);
 			path = octonotes;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49D1DAB20C0931300135919 /* ViewController.swift in Sources */,
+				D44D3DDC20C8EF6000C65081 /* GitHubProfileViewController.swift in Sources */,
 				D49D1DB120C0931300135919 /* octonotes.xcdatamodeld in Sources */,
 				D49D1DDD20C5DE1E00135919 /* TextEntryViewController.swift in Sources */,
 				D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */,
@@ -668,7 +672,10 @@
 				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
 				INFOPLIST_FILE = octonotes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -685,7 +692,10 @@
 				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
 				INFOPLIST_FILE = octonotes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -702,7 +712,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
 				INFOPLIST_FILE = octonotesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -720,7 +734,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
 				INFOPLIST_FILE = octonotesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -737,7 +755,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
 				INFOPLIST_FILE = octonotesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -754,7 +776,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
 				INFOPLIST_FILE = octonotesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.octonotesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

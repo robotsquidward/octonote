@@ -42,9 +42,8 @@ class ViewController: UIViewController {
             
             let oauthToken = NSURLComponents(string: (successURL.absoluteString))?.queryItems?.filter({$0.name == "code"}).first
             
-            // Do what you now that you've got the token, or use the callBack URL
-            print(oauthToken ?? "No OAuth Token")
-            
+            UserDefaults.standard.set(oauthToken?.value, forKey: "oauthToken")
+
             self.launchNewNote()
         })
         
@@ -52,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     func launchNewNote() {
-        present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TextEntryViewController"), animated: true, completion: nil)
+        present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GitHubProfileViewController"), animated: true, completion: nil)
     }
 }
 

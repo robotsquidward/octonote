@@ -101,7 +101,7 @@ class TextEntryViewController: UIViewController, UITextViewDelegate {
             })
         }
         
-        // Partial fixes to a long standing bug, to keeASWebAuthenticationSessionp the caret inside the `UITextView` always visible
+        // Partial fixes to a long standing bug, to keep the caret inside the `UITextView` always visible
         NotificationCenter.default.addObserver(forName: NSNotification.Name.UITextViewTextDidChange, object: textView, queue: OperationQueue.main) { (notification) -> Void in
             if textView.textStorage.string.hasSuffix("\n") {
                 CATransaction.setCompletionBlock({ () -> Void in
