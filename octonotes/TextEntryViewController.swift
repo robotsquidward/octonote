@@ -35,7 +35,7 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         let italicRanges = getItalicRanges(text: textStorage.string)
         let inlineRanges = getInlineCodeRanges(text: textStorage.string)
         
-        let font = UIFont.systemFont(ofSize: 14)
+        let font = UIFont.systemFont(ofSize: 15)
         let boldFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font.pointSize)
         let italicFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitItalic)!, size: font.pointSize)
         let inlineFont = UIFont(name: "Menlo", size: 14)!
