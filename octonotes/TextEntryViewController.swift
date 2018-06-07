@@ -35,15 +35,23 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         let italicRanges = getItalicRanges(text: textStorage.string)
         let inlineRanges = getInlineCodeRanges(text: textStorage.string)
         let codeBlockRanges = getCodeBlockRanges(text: textStorage.string)
+        let bulletRanges = getBulletRanges(text: textStorage.string)
         
         let font = UIFont.systemFont(ofSize: 15)
         let boldFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font.pointSize)
+        let bigBoldFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font.pointSize + 2)
         let italicFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitItalic)!, size: font.pointSize)
         let inlineFont = UIFont(name: "Menlo", size: 14)!
-       
-        let textStrRange = NSMakeRange(0, textStorage.string.count)
         
+        let bulletParagraph = NSMutableParagraphStyle()
+        bulletParagraph.firstLineHeadIndent = CGFloat(10)
+       
+        // Default Text Styles
+        let textStrRange = NSMakeRange(0, textStorage.string.count)
         textStorage.addAttribute(.font, value: font, range: textStrRange)
+        textStorage.addAttribute(.foregroundColor, value: UIColor.darkText, range: textStrRange)
+        textStorage.addAttribute(.paragraphStyle, value: NSParagraphStyle.default, range: textStrRange)
+        
         for boldRange in boldRanges {
             textStorage.addAttribute(.font, value: boldFont, range: boldRange)
         }
@@ -52,6 +60,12 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         }
         for inlineCodeRange in inlineRanges {
             textStorage.addAttribute(.font, value: inlineFont, range: inlineCodeRange)
+        }
+        for bulletRange in bulletRanges {
+            print("bulletRange: \(bulletRange)")
+            textStorage.addAttribute(.foregroundColor, value: UIColor.blue, range: bulletRange)
+            textStorage.addAttribute(.font, value: bigBoldFont, range: bulletRange)
+            textStorage.addAttribute(.paragraphStyle, value: bulletParagraph, range: bulletRange)
         }
         for codeBlockRange in codeBlockRanges {
             textStorage.addAttribute(.font, value: inlineFont, range: codeBlockRange)
@@ -112,5 +126,22 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         }
         
         return results
+    }
     
+    func getBulletRanges(text: String) -> [NSRange] {
+        
+        let regex = try! NSRegularExpression(pattern:"[*-](.*?)\\n", options: [])
+        var results = [NSRange]()
+        
+        regex.enumerateMatches(in: text, options: [], range: NSMakeRange(0, text.utf16.count)) { result, flags, stop in
+            if let r = result?.range(at: 1) {
+                let modifiedRange = NSMakeRange(r.location-1, 1)
+                if let range = Range(modifiedRange, in: text) {
+                    results.append(text.nsRange(from: range))
+                }
+            }
+        }
+        
+        return results
+    }
 }

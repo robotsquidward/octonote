@@ -114,14 +114,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zfl-d4-XB5">
-                                <rect key="frame" x="16" y="58" width="343" height="589"/>
+                                <rect key="frame" x="16" y="66" width="343" height="385"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHM-pU-6ub">
-                                <rect key="frame" x="281" y="20" width="78" height="30"/>
+                                <rect key="frame" x="281" y="28" width="78" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lqV-xD-S33"/>
@@ -140,7 +140,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ER-yE-BLG">
-                                <rect key="frame" x="195" y="20" width="78" height="30"/>
+                                <rect key="frame" x="195" y="28" width="78" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3wS-9q-JPj"/>
@@ -165,10 +165,10 @@
                             <constraint firstItem="gjZ-Ow-cmC" firstAttribute="trailing" secondItem="SHM-pU-6ub" secondAttribute="trailing" constant="16" id="5Vi-3z-zfA"/>
                             <constraint firstItem="Zfl-d4-XB5" firstAttribute="top" secondItem="SHM-pU-6ub" secondAttribute="bottom" constant="8" id="FvP-7q-SqM"/>
                             <constraint firstItem="SHM-pU-6ub" firstAttribute="leading" secondItem="6ER-yE-BLG" secondAttribute="trailing" constant="8" id="HSw-Iv-hUk"/>
-                            <constraint firstItem="gjZ-Ow-cmC" firstAttribute="bottom" secondItem="Zfl-d4-XB5" secondAttribute="bottom" constant="20" id="LfC-Hd-qWR"/>
+                            <constraint firstItem="gjZ-Ow-cmC" firstAttribute="bottom" secondItem="Zfl-d4-XB5" secondAttribute="bottom" constant="216" id="LfC-Hd-qWR"/>
                             <constraint firstItem="Zfl-d4-XB5" firstAttribute="leading" secondItem="gjZ-Ow-cmC" secondAttribute="leading" constant="16" id="TiJ-VL-Tei"/>
-                            <constraint firstItem="6ER-yE-BLG" firstAttribute="top" secondItem="gjZ-Ow-cmC" secondAttribute="top" id="ogc-e1-gVR"/>
-                            <constraint firstItem="SHM-pU-6ub" firstAttribute="top" secondItem="gjZ-Ow-cmC" secondAttribute="top" id="rXN-pU-hKA"/>
+                            <constraint firstItem="6ER-yE-BLG" firstAttribute="top" secondItem="gjZ-Ow-cmC" secondAttribute="top" constant="8" id="ogc-e1-gVR"/>
+                            <constraint firstItem="SHM-pU-6ub" firstAttribute="top" secondItem="gjZ-Ow-cmC" secondAttribute="top" constant="8" id="rXN-pU-hKA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gjZ-Ow-cmC"/>
                     </view>
