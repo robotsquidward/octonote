@@ -54,10 +54,10 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     /* Text Storage Delegate Methods */
     func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {
         
-        let boldRanges = getBoldRanges(text: textStorage.string)
-        let italicRanges = getItalicRanges(text: textStorage.string)
-        let inlineRanges = getInlineCodeRanges(text: textStorage.string)
-        let codeBlockRanges = getCodeBlockRanges(text: textStorage.string)
+        let boldRanges = getRangeForString(regexString: "\\*{2}(.*?)\\*{2}", text: textStorage.string)
+        let italicRanges = getRangeForString(regexString: "\\*{1}(.*?)\\*{1}", text: textStorage.string)
+        let inlineRanges = getRangeForString(regexString: "\\`{1}(.*?)\\`{1}", text: textStorage.string)
+        let codeBlockRanges = getRangeForString(regexString: "\\`{3}([\\s\\S]*?)\\`{3}", text: textStorage.string)
         let bulletRanges = getBulletRanges(text: textStorage.string)
         
         let font = UIFont.systemFont(ofSize: 15)
@@ -95,9 +95,9 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         }
     }
     
-    func getBoldRanges(text: String) -> [NSRange] {
+    func getRangeForString(regexString: String, text: String) -> [NSRange] {
         
-        let regex = try! NSRegularExpression(pattern:"\\*{2}(.*?)\\*{2}", options: [])
+        let regex = try! NSRegularExpression(pattern:regexString, options: [])
         var results = [NSRange]()
         
         regex.enumerateMatches(in: text, options: [], range: NSMakeRange(0, text.utf16.count)) { result, flags, stop in
@@ -109,48 +109,8 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         return results
     }
     
-    func getItalicRanges(text: String) -> [NSRange] {
-        
-        let regex = try! NSRegularExpression(pattern:"\\*{1}(.*?)\\*{1}", options: [])
-        var results = [NSRange]()
-        
-        regex.enumerateMatches(in: text, options: [], range: NSMakeRange(0, text.utf16.count)) { result, flags, stop in
-            if let r = result?.range(at: 1), let range = Range(r, in: text) {
-                results.append(text.nsRange(from: range))
-            }
-        }
-        
-        return results
-    }
     
-    func getInlineCodeRanges(text: String) -> [NSRange] {
-        //
-        let regex = try! NSRegularExpression(pattern:"\\`{1}(.*?)\\`{1}", options: [])
-        var results = [NSRange]()
-        
-        regex.enumerateMatches(in: text, options: [], range: NSMakeRange(0, text.utf16.count)) { result, flags, stop in
-            if let r = result?.range(at: 1), let range = Range(r, in: text) {
-                results.append(text.nsRange(from: range))
-            }
-        }
-        
-        return results
-    }
-    
-    func getCodeBlockRanges(text: String) -> [NSRange] {
-
-        let regex = try! NSRegularExpression(pattern:"\\`{3}([\\s\\S]*?)\\`{3}", options: [])
-        var results = [NSRange]()
-        
-        regex.enumerateMatches(in: text, options: [], range: NSMakeRange(0, text.utf16.count)) { result, flags, stop in
-            if let r = result?.range(at: 1), let range = Range(r, in: text) {
-                results.append(text.nsRange(from: range))
-            }
-        }
-        
-        return results
-    }
-    
+    // Bullets are handled slightly differently to only alter the bullet point
     func getBulletRanges(text: String) -> [NSRange] {
         
         let regex = try! NSRegularExpression(pattern:"-([ ].*?)\\n", options: [])
@@ -167,4 +127,5 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         
         return results
     }
+    
 }
