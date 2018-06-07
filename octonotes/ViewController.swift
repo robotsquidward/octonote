@@ -15,16 +15,28 @@ class ViewController: UIViewController {
     
     var webAuthSession: ASWebAuthenticationSession?
     
+    @IBOutlet weak var primaryButton: UIButton!
+    @IBOutlet weak var secondaryButton: UIButton!
+    
     @IBAction func getStarted(_ sender: Any) {
-        getAuthTokenWithWebLogin()
+        if UserDefaults.standard.string(forKey: "oauthToken") != nil {
+            self.launchNewNote()
+        } else {
+            getAuthTokenWithWebLogin()
+        }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func openDashboard(_ sender: Any) {
+        // open dashboard VC
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if UserDefaults.standard.string(forKey: "oauthToken") != nil {
+            self.primaryButton.setTitle("New Note", for: .normal)
+        } else {
+            self.primaryButton.setTitle("Get Started with GitHub", for: .normal)
+        }
     }
     
     @available(iOS 12.0, *)
@@ -52,6 +64,10 @@ class ViewController: UIViewController {
     
     func launchNewNote() {
         present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TextEntryViewController"), animated: true, completion: nil)
+    }
+    
+    func launchLandingPage() {
+        present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GitHubProfileViewcontroller"), animated: true, completion: nil)
     }
 }
 

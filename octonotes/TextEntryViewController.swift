@@ -20,6 +20,7 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     }
     
     @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -40,7 +41,7 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     @objc func keyboardWillBeShown(note: Notification) {
         let userInfo = note.userInfo
         let keyboardFrame = userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect
-        if (UIDevice.modelName == "iPhone X") {
+        if (UIDevice.modelName == "iPhone X" || UIDevice.modelName == "Simulator iPhone X") {
             keyboardHeight.constant = keyboardFrame.height - 30
         } else {
             keyboardHeight.constant = keyboardFrame.height

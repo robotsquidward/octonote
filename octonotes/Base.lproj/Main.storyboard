@@ -53,6 +53,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDV-P0-YuW">
+                                <rect key="frame" x="32" y="578" width="311" height="80"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="311" id="L4Q-ih-QLo"/>
+                                    <constraint firstAttribute="height" constant="80" id="MWZ-HR-aP4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="Dashboard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghd-YZ-OcC"/>
+                                    <action selector="openDashboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3K-nc-bPL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -60,50 +81,23 @@
                             <constraint firstItem="iOw-iv-7DO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Dvd-rN-one"/>
                             <constraint firstItem="t1j-rw-BXq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQ3-8k-6gv"/>
                             <constraint firstItem="S55-n9-Xcc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.97" id="Ob5-sN-KZz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bDV-P0-YuW" secondAttribute="trailing" constant="32" id="Waf-Bc-stY"/>
                             <constraint firstItem="t1j-rw-BXq" firstAttribute="top" secondItem="S55-n9-Xcc" secondAttribute="bottom" constant="8" id="dwf-Jv-1Je"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iOw-iv-7DO" secondAttribute="bottom" constant="32" id="lwu-pc-dol"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iOw-iv-7DO" secondAttribute="trailing" constant="32" id="oEQ-66-tZ7"/>
+                            <constraint firstItem="bDV-P0-YuW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="rHo-Kq-VVH"/>
+                            <constraint firstItem="iOw-iv-7DO" firstAttribute="top" secondItem="bDV-P0-YuW" secondAttribute="bottom" constant="8" id="tbL-qN-iPk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="primaryButton" destination="iOw-iv-7DO" id="IIz-at-H1F"/>
+                        <outlet property="secondaryButton" destination="bDV-P0-YuW" id="fb9-em-32a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
-        </scene>
-        <!--Git Hub Profile View Controller-->
-        <scene sceneID="uEt-bG-XpS">
-            <objects>
-                <viewController restorationIdentifier="GitHubProfileViewController" storyboardIdentifier="GitHubProfileViewController" id="Xw5-Sd-UNe" customClass="GitHubProfileViewController" customModule="octonotes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QVQ-HE-7Lf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Your GitHub Profile" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucS-VO-VmN">
-                                <rect key="frame" x="16" y="44" width="343" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="6nm-Mn-1Lg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ucS-VO-VmN" firstAttribute="leading" secondItem="CYh-QP-MDk" secondAttribute="leading" constant="16" id="I8Z-Ml-mug"/>
-                            <constraint firstItem="ucS-VO-VmN" firstAttribute="top" secondItem="CYh-QP-MDk" secondAttribute="top" id="awu-ag-lou"/>
-                            <constraint firstItem="CYh-QP-MDk" firstAttribute="trailing" secondItem="ucS-VO-VmN" secondAttribute="trailing" constant="16" id="lFJ-Z4-pYP"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="CYh-QP-MDk"/>
-                    </view>
-                    <connections>
-                        <outlet property="testArea" destination="ucS-VO-VmN" id="q8r-91-ksh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zBo-Us-2gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="858" y="134"/>
         </scene>
         <!--Text Entry View Controller-->
         <scene sceneID="h8L-Oo-22O">
@@ -337,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l24-jv-M6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="842.36453201970448"/>
+            <point key="canvasLocation" x="895" y="133"/>
         </scene>
     </scenes>
     <resources>
