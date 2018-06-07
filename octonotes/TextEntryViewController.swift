@@ -130,7 +130,7 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     
     func getBulletRanges(text: String) -> [NSRange] {
         
-        let regex = try! NSRegularExpression(pattern:"[*-](.*?)\\n", options: [])
+        let regex = try! NSRegularExpression(pattern:"-([ ].*?)\\n", options: [])
         var results = [NSRange]()
         
         regex.enumerateMatches(in: text, options: [], range: NSMakeRange(0, text.utf16.count)) { result, flags, stop in
