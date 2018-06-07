@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     func launchNewNote() {
-        present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GitHubProfileViewController"), animated: true, completion: nil)
+        present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TextEntryViewController"), animated: true, completion: nil)
     }
 }
 
