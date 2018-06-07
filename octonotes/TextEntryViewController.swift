@@ -34,12 +34,16 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         let boldRanges = getBoldRanges(text: textStorage.string)
         let italicRanges = getItalicRanges(text: textStorage.string)
         let inlineRanges = getInlineCodeRanges(text: textStorage.string)
+        let codeBlockRanges = getCodeBlockRanges(text: textStorage.string)
         
         let font = UIFont.systemFont(ofSize: 15)
         let boldFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font.pointSize)
         let italicFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitItalic)!, size: font.pointSize)
         let inlineFont = UIFont(name: "Menlo", size: 14)!
+       
+        let textStrRange = NSMakeRange(0, textStorage.string.count)
         
+        textStorage.addAttribute(.font, value: font, range: textStrRange)
         for boldRange in boldRanges {
             textStorage.addAttribute(.font, value: boldFont, range: boldRange)
         }
@@ -48,6 +52,9 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         }
         for inlineCodeRange in inlineRanges {
             textStorage.addAttribute(.font, value: inlineFont, range: inlineCodeRange)
+        }
+        for codeBlockRange in codeBlockRanges {
+            textStorage.addAttribute(.font, value: inlineFont, range: codeBlockRange)
         }
     }
     
@@ -80,7 +87,7 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     }
     
     func getInlineCodeRanges(text: String) -> [NSRange] {
-        
+        //
         let regex = try! NSRegularExpression(pattern:"\\`{1}(.*?)\\`{1}", options: [])
         var results = [NSRange]()
         
@@ -92,4 +99,18 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         
         return results
     }
+    
+    func getCodeBlockRanges(text: String) -> [NSRange] {
+
+        let regex = try! NSRegularExpression(pattern:"\\`{3}([\\s\\S]*?)\\`{3}", options: [])
+        var results = [NSRange]()
+        
+        regex.enumerateMatches(in: text, options: [], range: NSMakeRange(0, text.utf16.count)) { result, flags, stop in
+            if let r = result?.range(at: 1), let range = Range(r, in: text) {
+                results.append(text.nsRange(from: range))
+            }
+        }
+        
+        return results
+    
 }
