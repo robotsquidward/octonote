@@ -6,6 +6,7 @@ target 'octonotes' do
   use_frameworks!
   
   pod 'Marklight'
+  pod 'IQKeyboardManagerSwift'
 
   target 'octonotesTests' do
     inherit! :search_paths

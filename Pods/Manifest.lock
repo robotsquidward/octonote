@@ -1,12 +1,15 @@
 PODS:
+  - IQKeyboardManagerSwift (6.0.3)
   - Marklight (1.4.0)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
   - Marklight
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
   Marklight: 2489d376cd3d3e7b1d109cd7d6d248fd9b8e0bee
 
-PODFILE CHECKSUM: 5984d94109d7533a793fc45d1a77fda06657e943
+PODFILE CHECKSUM: 8a955042536c727546ef0f0347f9eebe14ac8d27
 
 COCOAPODS: 1.4.0
