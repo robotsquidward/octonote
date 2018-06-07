@@ -59,12 +59,25 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         let inlineRanges = getRangeForString(regexString: "\\`{1}(.*?)\\`{1}", text: textStorage.string)
         let codeBlockRanges = getRangeForString(regexString: "\\`{3}([\\s\\S]*?)\\`{3}", text: textStorage.string)
         let bulletRanges = getBulletRanges(text: textStorage.string)
+        let h1Ranges = getRangeForString(regexString: "#([ ].*?)\\n", text: textStorage.string)
+        let h2Ranges = getRangeForString(regexString: "##([ ].*?)\\n", text: textStorage.string)
+        let h3Ranges = getRangeForString(regexString: "###([ ].*?)\\n", text: textStorage.string)
+        let h4Ranges = getRangeForString(regexString: "####([ ].*?)\\n", text: textStorage.string)
+        let h5Ranges = getRangeForString(regexString: "#####([ ].*?)\\n", text: textStorage.string)
+
         
         let font = UIFont.systemFont(ofSize: 15)
         let boldFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font.pointSize)
         let bigBoldFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font.pointSize + 2)
         let italicFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitItalic)!, size: font.pointSize)
         let inlineFont = UIFont(name: "Menlo", size: 14)!
+        
+        let h1Font = UIFont.systemFont(ofSize: 30)
+        let h2Font = UIFont.systemFont(ofSize: 22)
+        let h3Font = UIFont.systemFont(ofSize: 18)
+        let h4Font = UIFont.systemFont(ofSize: 16)
+        let h5Font = UIFont.systemFont(ofSize: 12)
+
         
         let bulletParagraph = NSMutableParagraphStyle()
         bulletParagraph.firstLineHeadIndent = CGFloat(10)
@@ -92,6 +105,21 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         }
         for codeBlockRange in codeBlockRanges {
             textStorage.addAttribute(.font, value: inlineFont, range: codeBlockRange)
+        }
+        for h1 in h1Ranges {
+            textStorage.addAttribute(.font, value: h1Font, range: h1)
+        }
+        for h2 in h2Ranges {
+            textStorage.addAttribute(.font, value: h2Font, range: h2)
+        }
+        for h3 in h3Ranges {
+            textStorage.addAttribute(.font, value: h3Font, range: h3)
+        }
+        for h4 in h4Ranges {
+            textStorage.addAttribute(.font, value: h4Font, range: h4)
+        }
+        for h5 in h5Ranges {
+            textStorage.addAttribute(.font, value: h5Font, range: h5)
         }
     }
     
