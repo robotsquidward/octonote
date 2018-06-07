@@ -14,6 +14,8 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     
     @IBOutlet weak var mdTextView: UITextView!
     
+    @IBOutlet weak var keyboardHeight: NSLayoutConstraint!
+    
     @IBAction func saveAction(_ sender: Any) {
     }
     
@@ -26,7 +28,28 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         mdTextView.textStorage.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillBeShown(note:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
     
+    
+    /* Keyboard Notification Handler */
+    @objc func keyboardWillBeShown(note: Notification) {
+        let userInfo = note.userInfo
+        let keyboardFrame = userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect
+        if (UIDevice.modelName == "iPhone X") {
+            keyboardHeight.constant = keyboardFrame.height - 30
+        } else {
+            keyboardHeight.constant = keyboardFrame.height
+        }
+    }
+    
+    @objc func keyboardWillBeHidden(note: Notification) {
+        keyboardHeight.constant = 0
+    }
     
     /* Text Storage Delegate Methods */
     func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {
