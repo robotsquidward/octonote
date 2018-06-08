@@ -156,12 +156,12 @@
 				D49D1DA820C0931300135919 /* AppDelegate.swift */,
 				D49D1DAA20C0931300135919 /* ViewController.swift */,
 				D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */,
+				D44D3DDB20C8EF6000C65081 /* GitHubProfileViewController.swift */,
 				D49D1DAC20C0931300135919 /* Main.storyboard */,
 				D49D1DB220C0931500135919 /* Assets.xcassets */,
 				D49D1DB420C0931500135919 /* LaunchScreen.storyboard */,
 				D49D1DB720C0931500135919 /* Info.plist */,
 				D49D1DAF20C0931300135919 /* octonotes.xcdatamodeld */,
-				D44D3DDB20C8EF6000C65081 /* GitHubProfileViewController.swift */,
 			);
 			path = octonotes;
 			sourceTree = "<group>";

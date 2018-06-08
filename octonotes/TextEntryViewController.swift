@@ -20,6 +20,7 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     }
     
     @IBAction func cancelAction(_ sender: Any) {
+        mdTextView.endEditing(true)
         dismiss(animated: true, completion: nil)
     }
     

@@ -25,10 +25,6 @@ class ViewController: UIViewController {
             getAuthTokenWithWebLogin()
         }
     }
-
-    @IBAction func openDashboard(_ sender: Any) {
-        // open dashboard VC
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -66,8 +62,5 @@ class ViewController: UIViewController {
         present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TextEntryViewController"), animated: true, completion: nil)
     }
     
-    func launchLandingPage() {
-        present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GitHubProfileViewcontroller"), animated: true, completion: nil)
-    }
 }
 

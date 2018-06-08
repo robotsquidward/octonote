@@ -36,7 +36,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDV-P0-YuW">
-                                <rect key="frame" x="32" y="578" width="311" height="80"/>
+                                <rect key="frame" x="32" y="574" width="311" height="80"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="311" id="L4Q-ih-QLo"/>
@@ -66,13 +66,9 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghd-YZ-OcC"/>
-                                    <action selector="openDashboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3K-nc-bPL"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,7 +82,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iOw-iv-7DO" secondAttribute="bottom" constant="32" id="lwu-pc-dol"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iOw-iv-7DO" secondAttribute="trailing" constant="32" id="oEQ-66-tZ7"/>
                             <constraint firstItem="bDV-P0-YuW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="rHo-Kq-VVH"/>
-                            <constraint firstItem="iOw-iv-7DO" firstAttribute="top" secondItem="bDV-P0-YuW" secondAttribute="bottom" constant="8" id="tbL-qN-iPk"/>
+                            <constraint firstItem="iOw-iv-7DO" firstAttribute="top" secondItem="bDV-P0-YuW" secondAttribute="bottom" constant="12" id="tbL-qN-iPk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
