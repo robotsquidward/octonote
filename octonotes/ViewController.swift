@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func dashboardButtonAction() {
+        self.launchDashboard()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if UserDefaults.standard.string(forKey: "oauthToken") != nil {
@@ -60,6 +64,10 @@ class ViewController: UIViewController {
     
     func launchNewNote() {
         present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TextEntryViewController"), animated: true, completion: nil)
+    }
+    
+    func launchDashboard() {
+        present(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController"), animated: true, completion: nil)
     }
     
 }
