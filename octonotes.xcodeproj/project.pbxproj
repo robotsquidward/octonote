@@ -23,6 +23,9 @@
 		D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DDA20C095DA00135919 /* UIViewExtension.swift */; };
 		D49D1DDD20C5DE1E00135919 /* TextEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */; };
 		D49D1DE020C612C400135919 /* Sample.md in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DDE20C6106C00135919 /* Sample.md */; };
+		D4B49C8A20CAE81F00E729B1 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49C8920CAE81F00E729B1 /* Gist.swift */; };
+		D4B49C8C20CAE83100E729B1 /* GistKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49C8B20CAE83100E729B1 /* GistKey.swift */; };
+		D4B49C8E20CAE86400E729B1 /* GistPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49C8D20CAE86400E729B1 /* GistPost.swift */; };
 		F41A216F61775DD1319D6C0F /* Pods_octonotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2687EC3B49E0950618C4245 /* Pods_octonotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,9 @@
 		D49D1DDA20C095DA00135919 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryViewController.swift; sourceTree = "<group>"; };
 		D49D1DDE20C6106C00135919 /* Sample.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sample.md; sourceTree = "<group>"; };
+		D4B49C8920CAE81F00E729B1 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		D4B49C8B20CAE83100E729B1 /* GistKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistKey.swift; sourceTree = "<group>"; };
+		D4B49C8D20CAE86400E729B1 /* GistPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistPost.swift; sourceTree = "<group>"; };
 		E4077216CF9AA8B59568F0C1 /* Pods-octonotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECCFC596963D1C9EC1E72225 /* Pods-octonotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotes/Pods-octonotes.release.xcconfig"; sourceTree = "<group>"; };
 		EDCC60FB4CFA35B30544BE32 /* Pods-octonotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +132,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D43CCB9820CA14D000B577DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4B49C8920CAE81F00E729B1 /* Gist.swift */,
+				D4B49C8B20CAE83100E729B1 /* GistKey.swift */,
+				D4B49C8D20CAE86400E729B1 /* GistPost.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D49D1D9C20C0931200135919 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +167,7 @@
 		D49D1DA720C0931300135919 /* octonotes */ = {
 			isa = PBXGroup;
 			children = (
+				D43CCB9820CA14D000B577DB /* Model */,
 				D49D1DDF20C612B600135919 /* Bundle */,
 				D49D1DD920C095CB00135919 /* Extensions */,
 				D49D1DA820C0931300135919 /* AppDelegate.swift */,
@@ -493,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B49C8A20CAE81F00E729B1 /* Gist.swift in Sources */,
 				D44D3DDE20C9985C00C65081 /* StringProtocol.swift in Sources */,
 				D43CCB9720CA0F2800B577DB /* DashboardViewController.swift in Sources */,
 				D49D1DAB20C0931300135919 /* ViewController.swift in Sources */,
@@ -500,7 +518,9 @@
 				D49D1DDD20C5DE1E00135919 /* TextEntryViewController.swift in Sources */,
 				D44D3DE320C9E07600C65081 /* UIDeviceExtension.swift in Sources */,
 				D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */,
+				D4B49C8E20CAE86400E729B1 /* GistPost.swift in Sources */,
 				D49D1DA920C0931300135919 /* AppDelegate.swift in Sources */,
+				D4B49C8C20CAE83100E729B1 /* GistKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

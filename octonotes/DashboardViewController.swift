@@ -17,6 +17,7 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         self.authToken = UserDefaults.standard.string(forKey: "oauthToken")
-        // todo -> make network call with this token
+        
+        // todo -> make network call with this token to get the profile
     }
 }

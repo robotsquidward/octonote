@@ -13,10 +13,12 @@ import UIKit
 class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     
     @IBOutlet weak var mdTextView: UITextView!
+    @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var keyboardHeight: NSLayoutConstraint!
     
     @IBAction func saveAction(_ sender: Any) {
+        saveNewGist()
     }
     
     @IBAction func cancelAction(_ sender: Any) {
@@ -38,19 +40,54 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     }
     
     
+    func saveNewGist() {
+        // Save new gist using GitHub API
+        
+        let session = URLSession.shared
+        let token = UserDefaults.standard.string(forKey: "oauthToken")
+        var request = URLRequest(url: URL(string: "https://api.github.com/gists/?client_id=\(token ?? "")")!)
+        request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        let gistPost = GistPost(description: "New Gist from Octonote", isPublic: true, fileName: titleTextField.text!, contents: mdTextView.text!)
+        
+        let encoder = JSONEncoder()
+        do {
+            request.httpBody = try encoder.encode(gistPost)
+        } catch {
+            print("bad things happened")
+        }
+        
+        session.dataTask(with: request, completionHandler: { ( data: Data?, response: URLResponse?, error: Error?) -> Void in
+            // Make sure we get an OK response
+            guard let realResponse = response as? HTTPURLResponse,
+                realResponse.statusCode == 200 else {
+                    print("Not a 200 response")
+                    return
+            }
+            
+            // Read the JSON
+            if let postString = NSString(data:data!, encoding: String.Encoding.utf8.rawValue) as String? {
+                // Print what we got from the call
+                print("POST: " + postString)
+            }
+            
+        }).resume()
+    }
+    
+    
     /* Keyboard Notification Handler */
     @objc func keyboardWillBeShown(note: Notification) {
         let userInfo = note.userInfo
         let keyboardFrame = userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect
         if (UIDevice.modelName == "iPhone X" || UIDevice.modelName == "Simulator iPhone X") {
-            keyboardHeight.constant = keyboardFrame.height - 30
+            self.keyboardHeight.constant = keyboardFrame.height - 30
         } else {
-            keyboardHeight.constant = keyboardFrame.height
+            self.keyboardHeight.constant = keyboardFrame.height
         }
     }
     
     @objc func keyboardWillBeHidden(note: Notification) {
-        keyboardHeight.constant = 0
+        self.keyboardHeight.constant = 0
     }
     
     /* Text Storage Delegate Methods */
