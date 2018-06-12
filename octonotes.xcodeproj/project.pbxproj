@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		0BC286BD6FF32A69B394D229 /* Pods_octonotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CAE15754AC59832EFD64A0 /* Pods_octonotesTests.framework */; };
 		2C9547F4CA88FA5F2200F3B2 /* Pods_octonotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4221C46C6CCFFDF69197A59D /* Pods_octonotesUITests.framework */; };
-		D44D3DDC20C8EF6000C65081 /* GitHubProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D3DDB20C8EF6000C65081 /* GitHubProfileViewController.swift */; };
+		D43CCB9720CA0F2800B577DB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCB9620CA0F2800B577DB /* DashboardViewController.swift */; };
+		D44D3DDE20C9985C00C65081 /* StringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D3DDD20C9985C00C65081 /* StringProtocol.swift */; };
+		D44D3DE320C9E07600C65081 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D3DE220C9E07600C65081 /* UIDeviceExtension.swift */; };
 		D49D1DA920C0931300135919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DA820C0931300135919 /* AppDelegate.swift */; };
 		D49D1DAB20C0931300135919 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DAA20C0931300135919 /* ViewController.swift */; };
 		D49D1DAE20C0931300135919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DAC20C0931300135919 /* Main.storyboard */; };
@@ -21,6 +23,9 @@
 		D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DDA20C095DA00135919 /* UIViewExtension.swift */; };
 		D49D1DDD20C5DE1E00135919 /* TextEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */; };
 		D49D1DE020C612C400135919 /* Sample.md in Resources */ = {isa = PBXBuildFile; fileRef = D49D1DDE20C6106C00135919 /* Sample.md */; };
+		D4B49C8A20CAE81F00E729B1 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49C8920CAE81F00E729B1 /* Gist.swift */; };
+		D4B49C8C20CAE83100E729B1 /* GistKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49C8B20CAE83100E729B1 /* GistKey.swift */; };
+		D4B49C8E20CAE86400E729B1 /* GistPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49C8D20CAE86400E729B1 /* GistPost.swift */; };
 		F41A216F61775DD1319D6C0F /* Pods_octonotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2687EC3B49E0950618C4245 /* Pods_octonotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +53,9 @@
 		A4CAE15754AC59832EFD64A0 /* Pods_octonotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_octonotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7AD49D9799D018F1723FF1D /* Pods-octonotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-octonotes/Pods-octonotes.debug.xcconfig"; sourceTree = "<group>"; };
 		BF8A7B9C1D086887E1B4EA7B /* Pods-octonotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesUITests/Pods-octonotesUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D44D3DDB20C8EF6000C65081 /* GitHubProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubProfileViewController.swift; sourceTree = "<group>"; };
+		D43CCB9620CA0F2800B577DB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		D44D3DDD20C9985C00C65081 /* StringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocol.swift; sourceTree = "<group>"; };
+		D44D3DE220C9E07600C65081 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		D49D1DA520C0931200135919 /* octonotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = octonotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49D1DA820C0931300135919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49D1DAA20C0931300135919 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +73,9 @@
 		D49D1DDA20C095DA00135919 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryViewController.swift; sourceTree = "<group>"; };
 		D49D1DDE20C6106C00135919 /* Sample.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sample.md; sourceTree = "<group>"; };
+		D4B49C8920CAE81F00E729B1 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		D4B49C8B20CAE83100E729B1 /* GistKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistKey.swift; sourceTree = "<group>"; };
+		D4B49C8D20CAE86400E729B1 /* GistPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistPost.swift; sourceTree = "<group>"; };
 		E4077216CF9AA8B59568F0C1 /* Pods-octonotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECCFC596963D1C9EC1E72225 /* Pods-octonotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotes/Pods-octonotes.release.xcconfig"; sourceTree = "<group>"; };
 		EDCC60FB4CFA35B30544BE32 /* Pods-octonotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +132,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D43CCB9820CA14D000B577DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4B49C8920CAE81F00E729B1 /* Gist.swift */,
+				D4B49C8B20CAE83100E729B1 /* GistKey.swift */,
+				D4B49C8D20CAE86400E729B1 /* GistPost.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D49D1D9C20C0931200135919 = {
 			isa = PBXGroup;
 			children = (
@@ -147,17 +167,18 @@
 		D49D1DA720C0931300135919 /* octonotes */ = {
 			isa = PBXGroup;
 			children = (
+				D43CCB9820CA14D000B577DB /* Model */,
 				D49D1DDF20C612B600135919 /* Bundle */,
 				D49D1DD920C095CB00135919 /* Extensions */,
 				D49D1DA820C0931300135919 /* AppDelegate.swift */,
 				D49D1DAA20C0931300135919 /* ViewController.swift */,
 				D49D1DDC20C5DE1E00135919 /* TextEntryViewController.swift */,
+				D43CCB9620CA0F2800B577DB /* DashboardViewController.swift */,
 				D49D1DAC20C0931300135919 /* Main.storyboard */,
 				D49D1DB220C0931500135919 /* Assets.xcassets */,
 				D49D1DB420C0931500135919 /* LaunchScreen.storyboard */,
 				D49D1DB720C0931500135919 /* Info.plist */,
 				D49D1DAF20C0931300135919 /* octonotes.xcdatamodeld */,
-				D44D3DDB20C8EF6000C65081 /* GitHubProfileViewController.swift */,
 			);
 			path = octonotes;
 			sourceTree = "<group>";
@@ -184,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				D49D1DDA20C095DA00135919 /* UIViewExtension.swift */,
+				D44D3DDD20C9985C00C65081 /* StringProtocol.swift */,
+				D44D3DE220C9E07600C65081 /* UIDeviceExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -359,12 +382,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-octonotes/Pods-octonotes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Marklight/Marklight.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marklight.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -489,12 +510,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B49C8A20CAE81F00E729B1 /* Gist.swift in Sources */,
+				D44D3DDE20C9985C00C65081 /* StringProtocol.swift in Sources */,
+				D43CCB9720CA0F2800B577DB /* DashboardViewController.swift in Sources */,
 				D49D1DAB20C0931300135919 /* ViewController.swift in Sources */,
-				D44D3DDC20C8EF6000C65081 /* GitHubProfileViewController.swift in Sources */,
 				D49D1DB120C0931300135919 /* octonotes.xcdatamodeld in Sources */,
 				D49D1DDD20C5DE1E00135919 /* TextEntryViewController.swift in Sources */,
+				D44D3DE320C9E07600C65081 /* UIDeviceExtension.swift in Sources */,
 				D49D1DDB20C095DA00135919 /* UIViewExtension.swift in Sources */,
+				D4B49C8E20CAE86400E729B1 /* GistPost.swift in Sources */,
 				D49D1DA920C0931300135919 /* AppDelegate.swift in Sources */,
+				D4B49C8C20CAE83100E729B1 /* GistKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

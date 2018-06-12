@@ -9,119 +9,191 @@
 
 import Foundation
 import UIKit
-import Marklight
 
-class TextEntryViewController: UIViewController, UITextViewDelegate {
+class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     
-    // Keep strong instance of the `NSTextStorage` subclass
-    let textStorage = MarklightTextStorage()
+    @IBOutlet weak var mdTextView: UITextView!
+    @IBOutlet weak var titleTextField: UITextField!
     
-    var textView : UITextView?
+    @IBOutlet weak var keyboardHeight: NSLayoutConstraint!
     
-    // Connect the `textView`'s bottom layout constraint to react to keyboard movements
-    var bottomTextViewConstraint: NSLayoutConstraint?
+    @IBAction func saveAction(_ sender: Any) {
+        saveNewGist()
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        mdTextView.endEditing(true)
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textStorage.marklightTextProcessor.codeColor = UIColor.orange
-        textStorage.marklightTextProcessor.quoteColor = UIColor.darkGray
-        textStorage.marklightTextProcessor.syntaxColor = UIColor.blue
-        textStorage.marklightTextProcessor.codeFontName = "Menlo"
-        textStorage.marklightTextProcessor.fontTextStyle = UIFontTextStyle.subheadline.rawValue
-        textStorage.marklightTextProcessor.hideSyntax = false
+        mdTextView.textStorage.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillBeShown(note:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    
+    func saveNewGist() {
+        // Save new gist using GitHub API
         
-        let layoutManager = NSLayoutManager()
+        let session = URLSession.shared
+        let token = UserDefaults.standard.string(forKey: "oauthToken")
+        var request = URLRequest(url: URL(string: "https://api.github.com/gists?access_token=\(token ?? "")")!)
+        request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        let gistPost = GistPost(description: "New Gist from Octonote", isPublic: true, fileName: titleTextField.text!, content: mdTextView.text!)
         
-        // Assign the `UITextView`'s `NSLayoutManager` to the `NSTextStorage` subclass
-        textStorage.addLayoutManager(layoutManager)
-        
-        let textContainer = NSTextContainer()
-        layoutManager.addTextContainer(textContainer)
-        
-        textView = UITextView(frame: view.bounds, textContainer: textContainer)
-        guard let textView = textView else { return }
-        
-        textView.frame = view.bounds
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        
-        if #available(iOS 11.0, *) {
-            textView.smartDashesType = .no
-            textView.smartQuotesType = .no
+        let encoder = JSONEncoder()
+        do {
+            request.httpBody = try encoder.encode(gistPost)
+            print(String(data: request.httpBody!, encoding: .utf8)!)
+        } catch {
+            print("bad things happened")
         }
         
-        view.addSubview(textView)
-        
-        view.addConstraint(NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .topMargin, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leadingMargin, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailingMargin, multiplier: 1, constant: 0))
-        bottomTextViewConstraint = NSLayoutConstraint(item: textView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottomMargin, multiplier: 1, constant: 0)
-        guard let bottomTextViewConstraint = bottomTextViewConstraint else { return }
-        view.addConstraint(bottomTextViewConstraint)
-        
-        // Add a beautiful padding to the `UITextView` content
-        textView.textContainerInset = UIEdgeInsetsMake(4, 4, 4, 4)
-        textView.delegate = self
-        textView.isEditable = true
-        
-        // Load a sample markdown content from a file inside the app bundle
-        if let samplePath = Bundle.main.path(forResource: "Sample", ofType:  "md"){
-            do {
-                let string = try String(contentsOfFile: samplePath)
-                // Convert string to an `NSAttributedString`
-                let attributedString = NSAttributedString(string: string)
-                
-                // Set the loaded string to the `UITextView`
-                textStorage.append(attributedString)
-            } catch _ {
-                print("Cannot read Sample.md file")
+        session.dataTask(with: request, completionHandler: { ( data: Data?, response: URLResponse?, error: Error?) -> Void in
+            // Make sure we get an OK response
+            guard let realResponse = response as? HTTPURLResponse,
+                realResponse.statusCode == 200 else {
+                    print("Not a 200 response")
+                    return
             }
-        }
-        
-        // We do some magic to resize the `UITextView` to react the the keyboard size change (appearance, disappearance, ecc)
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil, queue: OperationQueue.main) { (notification) -> Void in
             
-            let initialRect = ((notification as NSNotification).userInfo![UIKeyboardFrameBeginUserInfoKey] as AnyObject).cgRectValue
-            let _ = self.view.frame.size.height - self.view.convert(initialRect!, from: nil).origin.y
-            let keyboardRect = ((notification as NSNotification).userInfo![UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
-            let newHeight = self.view.frame.size.height - self.view.convert(keyboardRect!, from: nil).origin.y
-            
-            guard let bottomTextViewConstraint = self.bottomTextViewConstraint else { return }
-            bottomTextViewConstraint.constant = newHeight
-            
-            textView.setNeedsUpdateConstraints()
-            
-            let duration = ((notification as NSNotification).userInfo![UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
-            let curve = ((notification as NSNotification).userInfo![UIKeyboardAnimationCurveUserInfoKey] as AnyObject).uintValue
-            
-            UIView.animate(withDuration: duration!, delay: 0, options: [UIViewAnimationOptions(rawValue: curve!), .beginFromCurrentState], animations: { () -> Void in
-                textView.layoutIfNeeded()
-            }, completion: { (finished) -> Void in
-                
-            })
-        }
-        
-        // Partial fixes to a long standing bug, to keep the caret inside the `UITextView` always visible
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UITextViewTextDidChange, object: textView, queue: OperationQueue.main) { (notification) -> Void in
-            if textView.textStorage.string.hasSuffix("\n") {
-                CATransaction.setCompletionBlock({ () -> Void in
-                    self.scrollToCaret(textView, animated: false)
-                })
-            } else {
-                self.scrollToCaret(textView, animated: false)
+            // Read the JSON
+            if let postString = NSString(data:data!, encoding: String.Encoding.utf8.rawValue) as String? {
+                // Print what we got from the call
+                print("POST: " + postString)
             }
+            
+        }).resume()
+    }
+    
+    
+    /* Keyboard Notification Handler */
+    @objc func keyboardWillBeShown(note: Notification) {
+        let userInfo = note.userInfo
+        let keyboardFrame = userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect
+        if (UIDevice.modelName == "iPhone X" || UIDevice.modelName == "Simulator iPhone X") {
+            self.keyboardHeight.constant = keyboardFrame.height - 30
+        } else {
+            self.keyboardHeight.constant = keyboardFrame.height
         }
     }
     
-    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
-        print("Should interact with: \(URL)")
-        return true
+    @objc func keyboardWillBeHidden(note: Notification) {
+        self.keyboardHeight.constant = 0
     }
     
-    func scrollToCaret(_ textView: UITextView, animated: Bool) {
-        var rect = textView.caretRect(for: textView.selectedTextRange!.end)
-        rect.size.height = rect.size.height + textView.textContainerInset.bottom
-        textView.scrollRectToVisible(rect, animated: animated)
+    /* Text Storage Delegate Methods */
+    func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {
+        
+        let boldRanges = getRangeForString(regexString: "\\*{2}(.*?)\\*{2}", text: textStorage.string)
+        let italicRanges = getRangeForString(regexString: "\\*{1}(.*?)\\*{1}", text: textStorage.string)
+        let inlineRanges = getRangeForString(regexString: "\\`{1}(.*?)\\`{1}", text: textStorage.string)
+        let codeBlockRanges = getRangeForString(regexString: "\\`{3}([\\s\\S]*?)\\`{3}", text: textStorage.string)
+        let bulletRanges = getBulletRanges(text: textStorage.string)
+        let h1Ranges = getRangeForString(regexString: "#([ ].*?)\\n", text: textStorage.string)
+        let h2Ranges = getRangeForString(regexString: "##([ ].*?)\\n", text: textStorage.string)
+        let h3Ranges = getRangeForString(regexString: "###([ ].*?)\\n", text: textStorage.string)
+        let h4Ranges = getRangeForString(regexString: "####([ ].*?)\\n", text: textStorage.string)
+        let h5Ranges = getRangeForString(regexString: "#####([ ].*?)\\n", text: textStorage.string)
+
+        
+        let font = UIFont.systemFont(ofSize: 15)
+        let boldFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font.pointSize)
+        let bigBoldFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font.pointSize + 2)
+        let italicFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitItalic)!, size: font.pointSize)
+        let inlineFont = UIFont(name: "Menlo", size: 14)!
+        
+        let h1Font = UIFont.systemFont(ofSize: 30)
+        let h2Font = UIFont.systemFont(ofSize: 22)
+        let h3Font = UIFont.systemFont(ofSize: 18)
+        let h4Font = UIFont.systemFont(ofSize: 16)
+        let h5Font = UIFont.systemFont(ofSize: 12)
+
+        
+        let bulletParagraph = NSMutableParagraphStyle()
+        bulletParagraph.firstLineHeadIndent = CGFloat(10)
+       
+        // Default Text Styles
+        let textStrRange = NSMakeRange(0, textStorage.string.count)
+        textStorage.addAttribute(.font, value: font, range: textStrRange)
+        textStorage.addAttribute(.foregroundColor, value: UIColor.darkText, range: textStrRange)
+        textStorage.addAttribute(.paragraphStyle, value: NSParagraphStyle.default, range: textStrRange)
+        
+        for boldRange in boldRanges {
+            textStorage.addAttribute(.font, value: boldFont, range: boldRange)
+        }
+        for italicRange in italicRanges {
+            textStorage.addAttribute(.font, value: italicFont, range: italicRange)
+        }
+        for inlineCodeRange in inlineRanges {
+            textStorage.addAttribute(.font, value: inlineFont, range: inlineCodeRange)
+        }
+        for bulletRange in bulletRanges {
+            print("bulletRange: \(bulletRange)")
+            textStorage.addAttribute(.foregroundColor, value: UIColor.blue, range: bulletRange)
+            textStorage.addAttribute(.font, value: bigBoldFont, range: bulletRange)
+            textStorage.addAttribute(.paragraphStyle, value: bulletParagraph, range: bulletRange)
+        }
+        for codeBlockRange in codeBlockRanges {
+            textStorage.addAttribute(.font, value: inlineFont, range: codeBlockRange)
+        }
+        for h1 in h1Ranges {
+            textStorage.addAttribute(.font, value: h1Font, range: h1)
+        }
+        for h2 in h2Ranges {
+            textStorage.addAttribute(.font, value: h2Font, range: h2)
+        }
+        for h3 in h3Ranges {
+            textStorage.addAttribute(.font, value: h3Font, range: h3)
+        }
+        for h4 in h4Ranges {
+            textStorage.addAttribute(.font, value: h4Font, range: h4)
+        }
+        for h5 in h5Ranges {
+            textStorage.addAttribute(.font, value: h5Font, range: h5)
+        }
+    }
+    
+    func getRangeForString(regexString: String, text: String) -> [NSRange] {
+        
+        let regex = try! NSRegularExpression(pattern:regexString, options: [])
+        var results = [NSRange]()
+        
+        regex.enumerateMatches(in: text, options: [], range: NSMakeRange(0, text.utf16.count)) { result, flags, stop in
+            if let r = result?.range(at: 1), let range = Range(r, in: text) {
+                results.append(text.nsRange(from: range))
+            }
+        }
+        
+        return results
+    }
+    
+    
+    // Bullets are handled slightly differently to only alter the bullet point
+    func getBulletRanges(text: String) -> [NSRange] {
+        
+        let regex = try! NSRegularExpression(pattern:"-([ ].*?)\\n", options: [])
+        var results = [NSRange]()
+        
+        regex.enumerateMatches(in: text, options: [], range: NSMakeRange(0, text.utf16.count)) { result, flags, stop in
+            if let r = result?.range(at: 1) {
+                let modifiedRange = NSMakeRange(r.location-1, 1)
+                if let range = Range(modifiedRange, in: text) {
+                    results.append(text.nsRange(from: range))
+                }
+            }
+        }
+        
+        return results
     }
     
 }
