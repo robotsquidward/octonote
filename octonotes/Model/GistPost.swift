@@ -14,10 +14,10 @@ struct GistPost: Encodable {
     let isPublic: Bool
     let gist: Gist
     
-    init(description: String, isPublic: Bool, fileName: String, contents: String) {
+    init(description: String, isPublic: Bool, fileName: String, content: String) {
         self.description = description
         self.isPublic = isPublic
-        self.gist = Gist(fileName: fileName, contents: contents)
+        self.gist = Gist(fileName: fileName, content: content)
     }
     
     private enum CodingKeys: String, CodingKey {

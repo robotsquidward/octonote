@@ -45,14 +45,15 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
         
         let session = URLSession.shared
         let token = UserDefaults.standard.string(forKey: "oauthToken")
-        var request = URLRequest(url: URL(string: "https://api.github.com/gists/?client_id=\(token ?? "")")!)
+        var request = URLRequest(url: URL(string: "https://api.github.com/gists?access_token=\(token ?? "")")!)
         request.httpMethod = "POST"
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        let gistPost = GistPost(description: "New Gist from Octonote", isPublic: true, fileName: titleTextField.text!, contents: mdTextView.text!)
+        let gistPost = GistPost(description: "New Gist from Octonote", isPublic: true, fileName: titleTextField.text!, content: mdTextView.text!)
         
         let encoder = JSONEncoder()
         do {
             request.httpBody = try encoder.encode(gistPost)
+            print(String(data: request.httpBody!, encoding: .utf8)!)
         } catch {
             print("bad things happened")
         }

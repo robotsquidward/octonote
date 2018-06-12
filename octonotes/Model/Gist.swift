@@ -11,11 +11,11 @@ import Foundation
 struct Gist: Encodable {
     
     let fileName: String
-    let contents: String
+    let content: String
     
-    init(fileName: String, contents: String) {
+    init(fileName: String, content: String) {
         self.fileName = fileName
-        self.contents = contents
+        self.content = content
     }
     
     func encode(to encoder: Encoder) throws {
@@ -26,6 +26,6 @@ struct Gist: Encodable {
         var gistContainer = container.nestedContainer(keyedBy: GistKey.self, forKey: nameKey)
         
         // The rest of the keys use static names defined in `ProductKey`.
-        try gistContainer.encode(self.contents, forKey: GistKey.contents!)
+        try gistContainer.encode(self.content, forKey: GistKey.content!)
     }
 }

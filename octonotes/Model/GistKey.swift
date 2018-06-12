@@ -18,5 +18,5 @@ struct GistKey: CodingKey {
     var intValue: Int? { return nil }
     init?(intValue: Int) { return nil }
     
-    static let contents = GistKey(stringValue: "contents")
+    static let content = GistKey(stringValue: "content")
 }

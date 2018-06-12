@@ -10,43 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "octonotes/TextEntryViewController.swift"
-            timestampString = "550211299.454855"
+            timestampString = "550497600.575542"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "saveNewGist()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "octonotes/TextEntryViewController.swift"
-            timestampString = "550211299.454965"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "saveNewGist()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "octonotes/TextEntryViewController.swift"
-            timestampString = "550211299.455036"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "saveNewGist()"
             landmarkType = "7">
             <Locations>
@@ -58,12 +26,12 @@
                   moduleName = "octonotes"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ajkueterman/Development/octonote/octonotes/TextEntryViewController.swift"
-                  timestampString = "550211299.73248"
+                  timestampString = "550497601.137818"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "3488">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "4379">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,11 +41,11 @@
                   moduleName = "octonotes"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ajkueterman/Development/octonote/octonotes/TextEntryViewController.swift"
-                  timestampString = "550211299.737262"
+                  timestampString = "550497601.141201"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
                   offsetFromSymbolStart = "204">
                </Location>
             </Locations>
@@ -90,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "octonotes/TextEntryViewController.swift"
-            timestampString = "550211299.455101"
+            timestampString = "550497600.576067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "saveAction(_:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "saveNewGist()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

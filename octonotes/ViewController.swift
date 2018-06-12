@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     func getAuthTokenWithWebLogin() {
         
         let state = "todo-create-an-unguessable-random-string"
-        let authURL = URL(string: "https://github.com/login/oauth/authorize?client_id=b8ec13ff8282fb430098&state=\(state)")
+        let authURL = URL(string: "https://github.com/login/oauth/authorize?scope=gist%20repo%20read:user&client_id=b8ec13ff8282fb430098&state=\(state)")
         let callbackUrlScheme = "octonotes://auth"
         
         self.webAuthSession = ASWebAuthenticationSession.init(url: authURL!, callbackURLScheme: callbackUrlScheme, completionHandler: { (callBack:URL?, error:Error?) in
@@ -84,7 +84,6 @@ class ViewController: UIViewController {
                     print("Not a 200 response")
                     return
             }
-            
             // Read the JSON
             if let postString = NSString(data:data!, encoding: String.Encoding.utf8.rawValue) as String? {
                 guard let url = URLComponents(string: "?\(postString)") else { return }
