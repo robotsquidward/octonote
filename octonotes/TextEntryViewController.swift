@@ -18,7 +18,11 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     @IBOutlet weak var keyboardHeight: NSLayoutConstraint!
     
     @IBAction func saveAction(_ sender: Any) {
-        saveNewGist()
+        let gist = GistPost(description: "A gist posted by OctoNote",
+                            isPublic: true,
+                            fileName: titleTextField.text!,
+                            content: mdTextView.text!)
+        saveNewGist(gistPost: gist)
     }
     
     @IBAction func cancelAction(_ sender: Any) {
@@ -40,41 +44,42 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
     }
     
     
-    func saveNewGist() {
+    func saveNewGist(gistPost: GistPost) {
         // Save new gist using GitHub API
         
-        let session = URLSession.shared
-        let token = UserDefaults.standard.string(forKey: "oauthToken")
-        var request = URLRequest(url: URL(string: "https://api.github.com/gists?access_token=\(token ?? "")")!)
-        request.httpMethod = "POST"
-        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        let gistPost = GistPost(description: "New Gist from Octonote", isPublic: true, fileName: titleTextField.text!, content: mdTextView.text!)
-        
-        let encoder = JSONEncoder()
+        let requestManager = RequestManager()
+        var request: URLRequest? = nil
         do {
-            request.httpBody = try encoder.encode(gistPost)
-            print(String(data: request.httpBody!, encoding: .utf8)!)
+            request = try requestManager.getNewGistRequest(gistPost: gistPost)
         } catch {
-            print("bad things happened")
+            print("Error encoding gist post: \(error)")
+            if request == nil { return }
         }
         
-        session.dataTask(with: request, completionHandler: { ( data: Data?, response: URLResponse?, error: Error?) -> Void in
+        let session = URLSession.shared
+        session.dataTask(with: request!, completionHandler: { ( data: Data?, response: URLResponse?, error: Error?) -> Void in
             // Make sure we get an OK response
             guard let realResponse = response as? HTTPURLResponse,
-                realResponse.statusCode == 200 else {
-                    print("Not a 200 response")
+                realResponse.statusCode == 201 else {
+                    print("New Gist could not be created!")
                     return
             }
             
-            // Read the JSON
-            if let postString = NSString(data:data!, encoding: String.Encoding.utf8.rawValue) as String? {
-                // Print what we got from the call
-                print("POST: " + postString)
-            }
+            self.handleSuccessfullySavedGist()
             
         }).resume()
     }
     
+    func handleSuccessfullySavedGist() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // in one second
+            let alert = UIAlertController(title: "New Gist!", message: "We got the gist, thanks!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction.init(title: "Cool!", style: .default, handler: { (UIAlertAction) in
+                self.mdTextView.endEditing(true)
+                self.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     /* Keyboard Notification Handler */
     @objc func keyboardWillBeShown(note: Notification) {
@@ -138,7 +143,6 @@ class TextEntryViewController: UIViewController, NSTextStorageDelegate {
             textStorage.addAttribute(.font, value: inlineFont, range: inlineCodeRange)
         }
         for bulletRange in bulletRanges {
-            print("bulletRange: \(bulletRange)")
             textStorage.addAttribute(.foregroundColor, value: UIColor.blue, range: bulletRange)
             textStorage.addAttribute(.font, value: bigBoldFont, range: bulletRange)
             textStorage.addAttribute(.paragraphStyle, value: bulletParagraph, range: bulletRange)

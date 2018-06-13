@@ -26,6 +26,7 @@
 		D4B49C8A20CAE81F00E729B1 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49C8920CAE81F00E729B1 /* Gist.swift */; };
 		D4B49C8C20CAE83100E729B1 /* GistKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49C8B20CAE83100E729B1 /* GistKey.swift */; };
 		D4B49C8E20CAE86400E729B1 /* GistPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49C8D20CAE86400E729B1 /* GistPost.swift */; };
+		D4B49CAE20D0888300E729B1 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B49CAD20D0888300E729B1 /* RequestManager.swift */; };
 		F41A216F61775DD1319D6C0F /* Pods_octonotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2687EC3B49E0950618C4245 /* Pods_octonotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		D4B49C8920CAE81F00E729B1 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		D4B49C8B20CAE83100E729B1 /* GistKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistKey.swift; sourceTree = "<group>"; };
 		D4B49C8D20CAE86400E729B1 /* GistPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistPost.swift; sourceTree = "<group>"; };
+		D4B49CAD20D0888300E729B1 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		E4077216CF9AA8B59568F0C1 /* Pods-octonotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECCFC596963D1C9EC1E72225 /* Pods-octonotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-octonotes/Pods-octonotes.release.xcconfig"; sourceTree = "<group>"; };
 		EDCC60FB4CFA35B30544BE32 /* Pods-octonotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octonotesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-octonotesTests/Pods-octonotesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		D49D1DA720C0931300135919 /* octonotes */ = {
 			isa = PBXGroup;
 			children = (
+				D4B49CAC20D0886000E729B1 /* Network */,
 				D43CCB9820CA14D000B577DB /* Model */,
 				D49D1DDF20C612B600135919 /* Bundle */,
 				D49D1DD920C095CB00135919 /* Extensions */,
@@ -217,6 +220,14 @@
 				D49D1DDE20C6106C00135919 /* Sample.md */,
 			);
 			path = Bundle;
+			sourceTree = "<group>";
+		};
+		D4B49CAC20D0886000E729B1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D4B49CAD20D0888300E729B1 /* RequestManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +524,7 @@
 				D4B49C8A20CAE81F00E729B1 /* Gist.swift in Sources */,
 				D44D3DDE20C9985C00C65081 /* StringProtocol.swift in Sources */,
 				D43CCB9720CA0F2800B577DB /* DashboardViewController.swift in Sources */,
+				D4B49CAE20D0888300E729B1 /* RequestManager.swift in Sources */,
 				D49D1DAB20C0931300135919 /* ViewController.swift in Sources */,
 				D49D1DB120C0931300135919 /* octonotes.xcdatamodeld in Sources */,
 				D49D1DDD20C5DE1E00135919 /* TextEntryViewController.swift in Sources */,
